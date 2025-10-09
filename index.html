@@ -3,18 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mostakim Sakib - Portfolio</title>
+  <title>Mostakim Sakib - DevOps Enthusiast & Developer</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Portfolio of Mostakim Sakib, aspiring DevOps engineer learning Bash, Linux, AWS, and more.">
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle" class="dark-mode-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
   <!-- Header -->
   <header>
     <div class="container">
-      <h1 class="logo">Mostakim<span>Sakib</span></h1>
+      <h1 class="logo">
+        <i class="fab fa-github"></i> Mostakim<span>Sakib</span>
+      </h1>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
       <nav>
-        <ul>
+        <ul id="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -24,20 +37,73 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <div class="hero-text">
-      <h2>Hello, I’m <span>Mostakim</span></h2>
-      <p>A passionate developer learning, building, and creating with modern tech.</p>
-      <a href="#projects" class="btn">View My Work</a>
+    <div class="hero-content">
+      <img src="https://avatars.githubusercontent.com/u/170673322?v=4" alt="Mostakim Sakib Profile Picture" class="profile-img">
+      <div class="hero-text">
+        <h2>Hello, I’m <span>Mostakim</span></h2>
+        <p>Aspiring DevOps Engineer | Passionate about automating the future with code.</p>
+        <a href="#projects" class="btn">Explore My Journey</a>
+      </div>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>
-      I am a developer who enjoys working with web technologies and learning new tools every day. 
-      This site is hosted on GitHub Pages with a custom domain connected via Cloudflare. 🚀
-    </p>
+    <div class="about-content">
+      <p>
+        I'm a dedicated developer diving deep into DevOps—from mastering Bash scripting and Linux fundamentals to regex patterns, CI/CD pipelines, containerization with Docker/Kubernetes, and cloud architectures on AWS. This journey is my daily commitment: learning, building, and contributing to open-source. 
+        This site is hosted on GitHub Pages with a custom domain via Cloudflare. Let's connect and automate the world together! 🚀
+      </p>
+      <div class="contributions">
+        <h3>Recent GitHub Activity</h3>
+        <div id="streak-container">
+          <i class="fas fa-spinner fa-spin"></i> Loading...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills & Learning Progress</h2>
+    <p class="section-subtitle">Daily updates on my DevOps toolkit—edit this list in HTML to track progress!</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fas fa-terminal"></i>
+        <h3>Bash Scripting</h3>
+        <p>Automating tasks with shell scripts.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 60%;"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-linux"></i>
+        <h3>Linux Fundamentals</h3>
+        <p>Command-line mastery and system admin.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-search"></i>
+        <h3>Regex Patterns</h3>
+        <p>Text processing and pattern matching.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 50%;"></div>
+        </div>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-cloud"></i>
+        <h3>AWS Cloud</h3>
+        <p>EC2, S3, Lambda, and infrastructure as code.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 40%;"></div>
+        </div>
+      </div>
+      <!-- Add more cards here daily, e.g.: -->
+      <!-- <div class="skill-card"> <i class="fab fa-docker"></i> <h3>Docker</h3> <p>Containerization basics.</p> <div class="progress-bar"><div class="progress" style="width: 30%;"></div></div> </div> -->
+    </div>
   </section>
 
   <!-- Projects Section -->
@@ -45,16 +111,22 @@
     <h2>Projects</h2>
     <div class="projects">
       <div class="card">
+        <i class="fas fa-globe"></i>
         <h3>🌐 Personal Portfolio</h3>
-        <p>A responsive portfolio website built with HTML & CSS.</p>
+        <p>A responsive portfolio built with HTML, CSS, and JS—now DevOps-focused.</p>
+        <a href="https://github.com/mostakimsakib0" target="_blank" class="btn-secondary">View on GitHub</a>
       </div>
       <div class="card">
-        <h3>📘 Blog</h3>
-        <p>A simple blog hosted on GitHub Pages with custom styling.</p>
+        <i class="fas fa-book"></i>
+        <h3>📘 DevOps Blog</h3>
+        <p>Notes on Bash, AWS, and daily learnings—coming soon!</p>
+        <a href="https://github.com/mostakimsakib0" target="_blank" class="btn-secondary">Plan Repo</a>
       </div>
       <div class="card">
-        <h3>⚡ Open Source</h3>
-        <p>Contributions to open-source projects and experiments on GitHub.</p>
+        <i class="fas fa-code-branch"></i>
+        <h3>⚡ Open Source Contributions</h3>
+        <p>Building and experimenting with DevOps tools on GitHub.</p>
+        <a href="https://github.com/mostakimsakib0?tab=repositories" target="_blank" class="btn-secondary">Explore Repos</a>
       </div>
     </div>
   </section>
@@ -62,13 +134,25 @@
   <!-- Contact Section -->
   <section id="contact" class="section">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:mostakim@example.com">mostakim@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/mostakimsakib0" target="_blank">@mostakimsakib0</a></p>
+    <p>Let's collaborate on DevOps projects!</p>
+    <div class="contact-links">
+      <a href="mailto:mostakim@example.com" class="contact-link">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://github.com/mostakimsakib0" target="_blank" class="contact-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://linkedin.com/in/mostakimsakib" target="_blank" class="contact-link">
+        <i class="fab fa-linkedin"></i> LinkedIn (Add your profile)
+      </a>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Mostakim Sakib | Built with ❤️ using GitHub Pages</p>
+    <p>© 2025 Mostakim Sakib | Built with ❤️ on <a href="https://github.com/mostakimsakib0" target="_blank">GitHub Pages</a></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
-  </html>
+</html>
