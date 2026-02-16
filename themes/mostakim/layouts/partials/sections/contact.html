@@ -1,0 +1,19 @@
+{{ $profile := .Site.Data.profile }}
+<section class="section section-contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2 class="section-title">Lets build something together.</h2>
+      <p class="section-lead">{{ $profile.availability }}</p>
+    </div>
+    <div class="card reveal">
+      <h3>Reach me</h3>
+      <p>{{ $profile.email }}</p>
+      <div class="chip-row">
+        {{ range $profile.socials }}
+          <a class="text-link" href="{{ .url }}">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

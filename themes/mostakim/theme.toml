@@ -1,0 +1,9 @@
+name = "Mostakim"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Custom Hugo theme for Md. Mostakim Ahmed Sakib"
+min_version = "0.125.0"
+
+[author]
+  name = "Mostakim Sakib"
+  homepage = "https://github.com/mostakimsakib0"

@@ -1,0 +1,24 @@
+{{ $achievements := .Site.Data.achievements }}
+<section class="section" id="achievements">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Achievements</p>
+      <h2 class="section-title">Moments that shaped my career.</h2>
+      <p class="section-lead">Recognition, talks, and milestones that highlight impact.</p>
+    </div>
+    <div class="grid">
+      {{ range $achievements }}
+        <article class="card reveal">
+          <div class="card-header">
+            <h3>{{ .title }}</h3>
+            <span class="meta">{{ .year }}</span>
+          </div>
+          <p>{{ .context }}</p>
+        </article>
+      {{ end }}
+    </div>
+    <div class="section-cta">
+      <a class="button ghost" href="/achievements/">See achievements</a>
+    </div>
+  </div>
+</section>

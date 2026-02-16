@@ -1,0 +1,17 @@
+- name: "Portfolio Platform"
+  description: "A fast, accessible portfolio with a publishing workflow and CMS integration."
+  stack: ["Hugo", "Netlify CMS", "JavaScript"]
+  link: "#"
+  status: "In progress"
+
+- name: "Realtime Collaboration Tool"
+  description: "Low-latency collaboration with a focus on conflict-free editing."
+  stack: ["TypeScript", "WebSocket", "Redis"]
+  link: "#"
+  status: "Concept"
+
+- name: "Developer Notes"
+  description: "A personal knowledge base with semantic search and tags."
+  stack: ["Go", "PostgreSQL", "Hugo"]
+  link: "#"
+  status: "Planned"

@@ -1,0 +1,33 @@
+{{ $profile := .Site.Data.profile }}
+<section class="section section-hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">{{ $profile.location }}</p>
+      <h1 class="hero-title">{{ $profile.name }}</h1>
+      <p class="hero-tagline">{{ $profile.summary }}</p>
+      <div class="hero-actions">
+        <a class="button" href="/projects/">View Projects</a>
+        <a class="button ghost" href="/contact/">Contact</a>
+      </div>
+      <div class="hero-highlights">
+        {{ range $profile.focus }}
+          <span>{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <div class="hero-card-inner">
+        <p class="meta">Current focus</p>
+        <h3>{{ $profile.title }}</h3>
+        <p>{{ .Site.Params.tagline }}</p>
+        <div class="divider"></div>
+        <p class="meta">Quick links</p>
+        <div class="hero-links">
+          {{ range $profile.socials }}
+            <a class="text-link" href="{{ .url }}">{{ .label }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

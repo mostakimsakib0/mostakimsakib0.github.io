@@ -1,0 +1,57 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Mostakim Sakib"
+theme = "mostakim"
+paginate = 6
+enableRobotsTXT = true
+summaryLength = 24
+
+timeZone = "Asia/Dhaka"
+
+[params]
+  brandName = "Md. Mostakim Ahmed Sakib"
+  shortName = "Mostakim Sakib"
+  tagline = "Software Engineer | Product-minded developer | Tech writer"
+  description = "Portfolio and publishing home of Md. Mostakim Ahmed Sakib."
+  accent = "#0ea5a5"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[permalinks]
+  blog = "/blog/:year/:month/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 3
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 4
+
+[[menu.main]]
+  name = "Achievements"
+  url = "/achievements/"
+  weight = 5
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 6

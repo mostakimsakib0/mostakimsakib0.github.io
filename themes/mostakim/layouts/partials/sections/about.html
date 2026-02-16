@@ -1,0 +1,35 @@
+{{ $about := .Site.GetPage "/about" }}
+{{ $skills := .Site.Data.skills }}
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">Product-minded engineering with clarity.</h2>
+      {{ with $about.Params.description }}
+        <p class="section-lead">{{ . }}</p>
+      {{ end }}
+    </div>
+    <div class="grid about-grid">
+      <div class="card reveal">
+        <div class="rich-text">
+          {{ $about.Content }}
+        </div>
+      </div>
+      <div class="card reveal">
+        <h3>Skills snapshot</h3>
+        <div class="chip-group">
+          {{ range $skills }}
+            <div class="chip-block">
+              <p class="meta">{{ .category }}</p>
+              <div class="chips">
+                {{ range .items }}
+                  <span>{{ . }}</span>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

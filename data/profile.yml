@@ -1,0 +1,16 @@
+name: "Md. Mostakim Ahmed Sakib"
+shortName: "Mostakim Sakib"
+title: "Software Engineer"
+summary: "I build reliable web systems, design clean interfaces, and write about engineering and growth."
+location: "Dhaka, Bangladesh"
+email: "hello@example.com"
+availability: "Open to collaboration and full-time roles"
+focus: ["Web engineering", "System design", "Technical writing"]
+
+socials:
+  - label: "GitHub"
+    url: "https://github.com/mostakimsakib0"
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/mostakimsakib"
+  - label: "Email"
+    url: "mailto:hello@example.com"

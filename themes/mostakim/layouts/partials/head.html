@@ -1,0 +1,23 @@
+{{ $title := printf "%s | %s" .Title .Site.Title }}
+{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+{{ $description := .Params.description | default .Site.Params.description }}
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("theme-preference");
+      var systemDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var theme = stored || (systemDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ $description }}">
+<title>{{ $title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300..700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">

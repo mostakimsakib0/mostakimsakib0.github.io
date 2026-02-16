@@ -1,0 +1,15 @@
+{{ $profile := .Site.Data.profile }}
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>{{ $profile.shortName }}</strong>
+      <p class="meta">{{ $profile.availability }}</p>
+    </div>
+    <div class="footer-links">
+      {{ range $profile.socials }}
+        <a href="{{ .url }}">{{ .label }}</a>
+      {{ end }}
+    </div>
+    <p class="meta">{{ now.Year }} © {{ $profile.shortName }}</p>
+  </div>
+</footer>

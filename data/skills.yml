@@ -1,0 +1,8 @@
+- category: "Engineering"
+  items: ["TypeScript", "Go", "Python", "Node.js", "PostgreSQL", "Redis"]
+
+- category: "Product"
+  items: ["System design", "API design", "Performance tuning", "DX tooling"]
+
+- category: "Writing"
+  items: ["Technical documentation", "Developer education", "Architecture notes"]
