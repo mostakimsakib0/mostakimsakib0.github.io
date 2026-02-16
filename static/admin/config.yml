@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: mostakimsakib0/mostakimsakib0.github.io
+  name: git-gateway
   branch: main
-  auth_endpoint: https://your-oauth-provider.netlify.app/auth
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
