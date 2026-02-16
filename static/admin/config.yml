@@ -14,7 +14,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
@@ -26,7 +26,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
@@ -37,19 +37,19 @@ collections:
         file: "content/about/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Projects"
         name: "projects"
         file: "content/projects/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
         name: "contact"
         file: "content/contact/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
+          - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Body", name: "body", widget: "markdown" }
