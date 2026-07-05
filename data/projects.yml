@@ -1,9 +1,3 @@
-- name: "WAFID Automation Tool"
-  description: "Automated medical appointment booking tool for wafid.com with proxy support and GUI interface for streamlined healthcare scheduling."
-  stack: ["Python", "Proxy", "GUI"]
-  link: "https://github.com/mostakimsakib0/wafid-automation-tool"
-  status: "Active"
-
 - name: "AutoDocker"
   description: "Docker automation and containerization utility for simplified deployment workflows."
   stack: ["Python", "Docker", "Automation"]
@@ -56,10 +50,4 @@
   description: "Intelligent conversational AI chatbot with natural language understanding and response generation."
   stack: ["Python", "NLP", "AI"]
   link: "https://github.com/mostakimsakib0/chatbot"
-  status: "Active"
-
-- name: "IEEE Manarat Student Branch"
-  description: "Official website and resource hub for IEEE Manarat Student Branch."
-  stack: ["HTML", "Web"]
-  link: "https://github.com/mostakimsakib0/IEEE-Manarat-Student-Branch"
   status: "Active"
