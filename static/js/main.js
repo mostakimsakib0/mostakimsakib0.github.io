@@ -151,28 +151,6 @@
     }
   })();
 
-  /* ─── Cursor Glow ─── */
-  (function () {
-    var glow = document.createElement("div");
-    glow.className = "cursor-glow";
-    document.body.appendChild(glow);
-
-    var timer;
-    document.addEventListener("mousemove", function (e) {
-      glow.style.left = e.clientX + "px";
-      glow.style.top = e.clientY + "px";
-      glow.classList.add("visible");
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        glow.classList.remove("visible");
-      }, 2000);
-    });
-
-    document.addEventListener("mouseleave", function () {
-      glow.classList.remove("visible");
-    });
-  })();
-
   /* ─── 3D Tilt on Hero Image ─── */
   (function () {
     var el = document.getElementById("tilt-image");
