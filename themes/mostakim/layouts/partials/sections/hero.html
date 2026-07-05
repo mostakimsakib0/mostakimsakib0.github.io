@@ -1,13 +1,22 @@
 {{ $profile := .Site.Data.profile }}
-<section class="section section-hero" id="home">
+{{ $projects := .Site.Data.projects }}
+{{ $achievements := .Site.Data.achievements }}
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+  </div>
   <div class="container hero-grid">
     <div class="hero-text">
       <p class="eyebrow">{{ $profile.location }}</p>
-      <h1 class="hero-title">{{ $profile.name }}</h1>
+      <h1 class="hero-title">
+        {{ $profile.name }}
+      </h1>
       <p class="hero-tagline">{{ $profile.summary }}</p>
       <div class="hero-actions">
-        <a class="button" href="/projects/">View Projects</a>
-        <a class="button ghost" href="/contact/">Contact</a>
+        <a class="button primary" href="/projects/">View Projects</a>
+        <a class="button ghost" href="/contact/">Get in Touch</a>
       </div>
       <div class="hero-highlights">
         {{ range $profile.focus }}
@@ -15,17 +24,31 @@
         {{ end }}
       </div>
     </div>
-    <div class="hero-card reveal">
-      <div class="hero-card-inner">
-        <p class="meta">Current focus</p>
-        <h3>{{ $profile.title }}</h3>
-        <p>{{ .Site.Params.tagline }}</p>
-        <div class="divider"></div>
-        <p class="meta">Quick links</p>
-        <div class="hero-links">
-          {{ range $profile.socials }}
-            <a class="text-link" href="{{ .url }}">{{ .label }}</a>
+    <div class="hero-visual">
+      <div class="hero-card reveal">
+        <div class="hero-card-inner">
+          {{ with $profile.avatar }}
+            <img class="hero-avatar" src="{{ . }}" alt="Profile photo" loading="lazy">
           {{ end }}
+          <h3>{{ $profile.title }}</h3>
+          <p class="meta">{{ $profile.availability }}</p>
+          <div class="divider"></div>
+          <p class="meta">Quick links</p>
+          <div class="hero-links">
+            {{ range $profile.socials }}
+              <a class="text-link" href="{{ .url }}">{{ .label }}</a>
+            {{ end }}
+          </div>
+          <div class="hero-card-stats">
+            <div class="hero-card-stat">
+              <div class="stat-value">{{ len $projects }}</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="hero-card-stat">
+              <div class="stat-value">{{ len $achievements }}</div>
+              <div class="stat-label">Achievements</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -5,11 +5,11 @@
       <strong>{{ $profile.shortName }}</strong>
       <p class="meta">{{ $profile.availability }}</p>
     </div>
-    <div class="footer-links">
+    <div class="footer-socials">
       {{ range $profile.socials }}
         <a href="{{ .url }}">{{ .label }}</a>
       {{ end }}
     </div>
-    <p class="meta">{{ now.Year }} © {{ $profile.shortName }}</p>
+    <p class="footer-copy">{{ now.Year }} © {{ $profile.shortName }}</p>
   </div>
 </footer>

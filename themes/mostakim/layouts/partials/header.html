@@ -1,5 +1,5 @@
 {{ $profile := .Site.Data.profile }}
-<header class="site-header">
+<header class="site-header" id="site-header">
   <div class="container header-inner">
     <a class="brand" href="/">
       <span class="brand-name">{{ $profile.shortName }}</span>
@@ -10,9 +10,20 @@
         <a href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
     </nav>
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
-      <span class="toggle-indicator"></span>
-      <span class="toggle-text">Theme</span>
-    </button>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+        <span id="theme-icon">☀️</span>
+      </button>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
+  {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
+</div>

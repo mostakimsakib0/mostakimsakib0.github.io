@@ -11,7 +11,14 @@
         <article class="card reveal">
           <div class="card-header">
             <h3>{{ .name }}</h3>
-            <span class="meta">{{ .status }}</span>
+            {{ $status := lower .status }}
+            {{ if in $status "active" }}
+              <span class="badge badge-active">{{ .status }}</span>
+            {{ else if in $status "archive" }}
+              <span class="badge badge-archived">{{ .status }}</span>
+            {{ else }}
+              <span class="badge badge-experiment">{{ .status }}</span>
+            {{ end }}
           </div>
           <p>{{ .description }}</p>
           <div class="chip-row">
@@ -19,7 +26,7 @@
               <span>{{ . }}</span>
             {{ end }}
           </div>
-          <a class="text-link" href="{{ .link }}">View details</a>
+          <a class="text-link card-cta" href="{{ .link }}">View details →</a>
         </article>
       {{ end }}
     </div>
