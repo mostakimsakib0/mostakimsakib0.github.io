@@ -9,21 +9,25 @@
   </div>
   <div class="container hero-grid">
     <div class="hero-text">
-      <p class="eyebrow">{{ $profile.location }}</p>
-      <h1 class="hero-title">{{ $profile.name }}</h1>
-      <p class="hero-tagline">{{ $profile.summary }}</p>
-      <div class="hero-actions">
-        <a class="button primary" href="/projects/">View Projects</a>
-        <a class="button ghost" href="/contact/">Get in Touch</a>
+      <p class="eyebrow hero-stagger hero-stagger-1">{{ $profile.location }}</p>
+      <h1 class="hero-title hero-stagger hero-stagger-2">{{ $profile.name }}</h1>
+      <p class="hero-tagline hero-stagger hero-stagger-3">{{ $profile.summary }}</p>
+      <div class="hero-actions hero-stagger hero-stagger-4">
+        <div class="magnetic-wrap">
+          <a class="button primary" href="/projects/">View Projects</a>
+        </div>
+        <div class="magnetic-wrap">
+          <a class="button ghost" href="/contact/">Get in Touch</a>
+        </div>
       </div>
-      <div class="hero-highlights">
+      <div class="hero-highlights hero-stagger hero-stagger-5">
         {{ range $profile.focus }}
           <span>{{ . }}</span>
         {{ end }}
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-image-frame">
+    <div class="hero-visual hero-stagger hero-stagger-6">
+      <div class="hero-image-frame tilt-element" id="tilt-image">
         <div class="hero-image-glow"></div>
         {{ with $profile.avatar }}
           <img class="hero-profile-img" src="{{ . }}" alt="Profile photo of {{ $profile.name }}" loading="eager">

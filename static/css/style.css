@@ -1279,6 +1279,84 @@ section.reveal {
   }
 }
 
+/* ─── Cursor Glow ─── */
+.cursor-glow {
+  position: fixed;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  will-change: left, top;
+  transition: opacity 0.4s ease;
+}
+
+.cursor-glow.visible {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .cursor-glow { display: none; }
+}
+
+/* ─── Hero Stagger Entrance ─── */
+.hero-stagger {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: hero-stagger-in 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.hero-stagger-1 { animation-delay: 0.1s; }
+.hero-stagger-2 { animation-delay: 0.25s; }
+.hero-stagger-3 { animation-delay: 0.4s; }
+.hero-stagger-4 { animation-delay: 0.55s; }
+.hero-stagger-5 { animation-delay: 0.65s; }
+.hero-stagger-6 { animation-delay: 0.75s; }
+
+@keyframes hero-stagger-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── 3D Tilt ─── */
+.tilt-element {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+/* ─── Button Ripple ─── */
+.button {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: ripple-anim 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes ripple-anim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ─── Magnetic Button Wrap ─── */
+.magnetic-wrap {
+  display: inline-flex;
+  transition: transform 0.15s ease-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
