@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="section section-hero">
+  <div class="container">
+    <p class="eyebrow">{{ .Section | title }}</p>
+    <h1 class="section-title">{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p class="section-lead">{{ . }}</p>
+    {{ end }}
+    {{ if .Content }}
+      <div class="rich-text">{{ .Content }}</div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid">
+    {{ range .Site.Data.achievements }}
+      <article class="card reveal">
+        <div class="card-header">
+          <h3>{{ .title }}</h3>
+          {{ with .year }}<span class="meta">{{ . }}</span>{{ end }}
+        </div>
+        {{ with .context }}
+          <p>{{ . }}</p>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

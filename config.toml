@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://mostakimsakib.me/"
 languageCode = "en-us"
 title = "Mostakim Sakib"
 theme = "mostakim"
@@ -16,7 +16,7 @@ timeZone = "Asia/Dhaka"
   accent = "#0ea5a5"
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
 
 [markup]
   [markup.goldmark]
