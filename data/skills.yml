@@ -1,8 +1,8 @@
-- category: "Engineering"
-  items: ["TypeScript", "Go", "Python", "Node.js", "PostgreSQL", "Redis"]
+- category: "Technical Leadership"
+  items: ["Interdisciplinary Collaboration", "Problem Solving", "Technical Innovation"]
 
-- category: "Product"
-  items: ["System design", "API design", "Performance tuning", "DX tooling"]
+- category: "Specializations"
+  items: ["Network Security", "Computer Systems", "System Design"]
 
-- category: "Writing"
-  items: ["Technical documentation", "Developer education", "Architecture notes"]
+- category: "Soft Skills"
+  items: ["Communication", "Team Leadership", "Knowledge Sharing"]

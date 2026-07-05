@@ -1,11 +1,13 @@
 name: "Md. Mostakim Ahmed Sakib"
 shortName: "Mostakim Sakib"
-title: "Software Engineer"
-summary: "I build reliable web systems, design clean interfaces, and write about engineering and growth."
+title: "Computer Science Engineer | Vice Chair (Technical) @ IEEE Manarat"
+summary: "I contribute to interdisciplinary collaboration and innovation in computer science. Building a strong foundation in computer systems and engineering with expertise in network security and technical leadership."
 location: "Dhaka, Bangladesh"
-email: "hello@example.com"
-availability: "Open to collaboration and full-time roles"
-focus: ["Web engineering", "System design", "Technical writing"]
+email: "2260cse01053@manarat.ac.bd"
+phone: "+8801996642731"
+avatar: "/uploads/profile.jpg"
+availability: "Open to collaboration and technical initiatives"
+focus: ["Interdisciplinary Collaboration", "Technical Leadership", "Network Security", "Problem Solving"]
 
 socials:
   - label: "GitHub"

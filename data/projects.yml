@@ -1,17 +1,65 @@
-- name: "Portfolio Platform"
-  description: "A fast, accessible portfolio with a publishing workflow and CMS integration."
-  stack: ["Hugo", "Netlify CMS", "JavaScript"]
-  link: "#"
+- name: "WAFID Automation Tool"
+  description: "Automated medical appointment booking tool for wafid.com with proxy support and GUI interface for streamlined healthcare scheduling."
+  stack: ["Python", "Proxy", "GUI"]
+  link: "https://github.com/mostakimsakib0/wafid-automation-tool"
+  status: "Active"
+
+- name: "AutoDocker"
+  description: "Docker automation and containerization utility for simplified deployment workflows."
+  stack: ["Python", "Docker", "Automation"]
+  link: "https://github.com/mostakimsakib0/autodocker"
   status: "In progress"
 
-- name: "Realtime Collaboration Tool"
-  description: "Low-latency collaboration with a focus on conflict-free editing."
-  stack: ["TypeScript", "WebSocket", "Redis"]
-  link: "#"
-  status: "Concept"
+- name: "NetGuardian"
+  description: "Network security and monitoring tool built with focus on performance and reliability."
+  stack: ["Rust", "Network Security", "Systems"]
+  link: "https://github.com/mostakimsakib0/NetGuardian"
+  status: "Development"
 
-- name: "Developer Notes"
-  description: "A personal knowledge base with semantic search and tags."
-  stack: ["Go", "PostgreSQL", "Hugo"]
-  link: "#"
-  status: "Planned"
+- name: "Proxy Manager"
+  description: "Efficient proxy management system for handling network requests and routing."
+  stack: ["Python", "Networking"]
+  link: "https://github.com/mostakimsakib0/proxy-manager"
+  status: "Active"
+
+- name: "MIU Software R&D Lab"
+  description: "University research and development laboratory infrastructure and tooling."
+  stack: ["Shell", "Infrastructure", "DevOps"]
+  link: "https://github.com/mostakimsakib0/MIU-Software-R-D-Lab"
+  status: "Active"
+
+- name: "Medilink Hospital System"
+  description: "Smart hospital appointment booking system with collaborative development for healthcare management."
+  stack: ["JavaScript", "Healthcare", "Web"]
+  link: "https://github.com/mostakimsakib0/Medilink-Smart-Hospital-Appointment-Booking-System"
+  status: "Active"
+
+- name: "AI-Powered Construction SaaS"
+  description: "AI-driven construction and building design optimization platform with advanced analytics and cost estimation."
+  stack: ["Python", "AI/ML", "SaaS", "Optimization"]
+  link: "https://github.com/mostakimsakib0/AI-Powered-Construction-Building-Design-Optimization-SaaS"
+  status: "Active"
+
+- name: "Legal Entity Extraction NLP"
+  description: "Natural Language Processing system for automated extraction and identification of legal entities from documents."
+  stack: ["Python", "NLP", "Machine Learning"]
+  link: "https://github.com/mostakimsakib0/Legal-Entity-Extraction-NLP-System"
+  status: "Active"
+
+- name: "Constraint-Driven LLM"
+  description: "Advanced language model framework with constraint-driven generation and control mechanisms."
+  stack: ["Python", "LLM", "AI"]
+  link: "https://github.com/mostakimsakib0/constraint-driven-llm"
+  status: "Development"
+
+- name: "Chatbot"
+  description: "Intelligent conversational AI chatbot with natural language understanding and response generation."
+  stack: ["Python", "NLP", "AI"]
+  link: "https://github.com/mostakimsakib0/chatbot"
+  status: "Active"
+
+- name: "IEEE Manarat Student Branch"
+  description: "Official website and resource hub for IEEE Manarat Student Branch."
+  stack: ["HTML", "Web"]
+  link: "https://github.com/mostakimsakib0/IEEE-Manarat-Student-Branch"
+  status: "Active"
