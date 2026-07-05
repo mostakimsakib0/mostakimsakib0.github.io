@@ -10,9 +10,7 @@
   <div class="container hero-grid">
     <div class="hero-text">
       <p class="eyebrow">{{ $profile.location }}</p>
-      <h1 class="hero-title">
-        {{ $profile.name }}
-      </h1>
+      <h1 class="hero-title">{{ $profile.name }}</h1>
       <p class="hero-tagline">{{ $profile.summary }}</p>
       <div class="hero-actions">
         <a class="button primary" href="/projects/">View Projects</a>
@@ -25,30 +23,30 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-card reveal">
-        <div class="hero-card-inner">
-          {{ with $profile.avatar }}
-            <img class="hero-avatar" src="{{ . }}" alt="Profile photo" loading="lazy">
-          {{ end }}
-          <h3>{{ $profile.title }}</h3>
-          <p class="meta">{{ $profile.availability }}</p>
-          <div class="divider"></div>
-          <p class="meta">Quick links</p>
-          <div class="hero-links">
-            {{ range $profile.socials }}
-              <a class="text-link" href="{{ .url }}">{{ .label }}</a>
-            {{ end }}
-          </div>
-          <div class="hero-card-stats">
-            <div class="hero-card-stat">
-              <div class="stat-value">{{ len $projects }}</div>
-              <div class="stat-label">Projects</div>
-            </div>
-            <div class="hero-card-stat">
-              <div class="stat-value">{{ len $achievements }}</div>
-              <div class="stat-label">Achievements</div>
-            </div>
-          </div>
+      <div class="hero-image-frame">
+        <div class="hero-image-glow"></div>
+        {{ with $profile.avatar }}
+          <img class="hero-profile-img" src="{{ . }}" alt="Profile photo of {{ $profile.name }}" loading="eager">
+        {{ end }}
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring hero-image-ring-2"></div>
+        <div class="hero-status-dot" title="Available for opportunities"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+      </div>
+      <div class="hero-image-stats">
+        <div class="hero-image-stat">
+          <div class="stat-value">{{ len $projects }}</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="hero-image-stat">
+          <div class="stat-value">{{ len $achievements }}</div>
+          <div class="stat-label">Achievements</div>
+        </div>
+        <div class="hero-image-stat">
+          <div class="stat-value">{{ $profile.socials | len }}</div>
+          <div class="stat-label">Socials</div>
         </div>
       </div>
     </div>
