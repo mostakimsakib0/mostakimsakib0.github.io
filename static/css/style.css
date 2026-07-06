@@ -1376,7 +1376,7 @@ section.reveal {
 .blog-featured-img-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 28px;
@@ -1417,7 +1417,7 @@ section.reveal {
 .blog-card-img-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
