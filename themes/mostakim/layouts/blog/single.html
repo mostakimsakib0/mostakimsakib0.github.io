@@ -1,0 +1,78 @@
+{{ define "main" }}
+<article class="article-page">
+  <div class="article-header">
+    <div class="container">
+      <a class="article-back" href="/blog/">← Back to blog</a>
+      <p class="article-eyebrow">{{ .Section | title }}</p>
+      <h1 class="article-title">{{ .Title }}</h1>
+      <div class="article-meta">
+        {{ with .Date }}
+          <span class="meta">{{ .Format "January 2, 2006" }}</span>
+        {{ end }}
+        <span class="meta">·</span>
+        {{ with .ReadingTime }}
+          <span class="meta">{{ . }} min read</span>
+        {{ end }}
+        {{ with .Params.tags }}
+          <span class="meta">·</span>
+          <div class="chip-row" style="display: inline-flex;">
+            {{ range . }}
+              <span>#{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="container article-body-wrap">
+    <article class="article-body rich-text">
+      {{ .Content }}
+    </article>
+
+    <aside class="article-sidebar">
+      <div class="article-sidebar-sticky">
+        {{ with .Params.tags }}
+          <div class="article-tags-card">
+            <h4>Tags</h4>
+            <div class="chip-row">
+              {{ range . }}
+                <span>#{{ . }}</span>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+
+        <div class="article-share-card">
+          <h4>Share</h4>
+          <div class="article-share-links">
+            <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  {{ $related := where (.Site.RegularPages.Related .) "Section" "blog" | first 2 }}
+  {{ if $related }}
+    <section class="container article-related">
+      <h2 class="article-related-title">Related articles</h2>
+      <div class="grid">
+        {{ range $related }}
+          <article class="card reveal">
+            <div class="card-header">
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <span class="meta">{{ .Date.Format "Jan 2, 2006" }}</span>
+            </div>
+            {{ with .Params.description }}
+              <p>{{ . }}</p>
+            {{ end }}
+            <a class="text-link card-cta" href="{{ .RelPermalink }}">Read article →</a>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</article>
+{{ end }}
