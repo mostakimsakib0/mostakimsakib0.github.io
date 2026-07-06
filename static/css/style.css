@@ -78,12 +78,15 @@ p { margin: 0 0 16px; }
 }
 
 .container {
-  width: min(1100px, 90vw);
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 32px;
 }
 
 .narrow {
-  width: min(760px, 90vw);
+  max-width: 900px;
+  padding: 0 32px;
 }
 
 .section {
@@ -97,7 +100,7 @@ section.reveal {
 }
 
 .section-heading {
-  max-width: 680px;
+  max-width: 800px;
   margin-bottom: 48px;
 }
 
@@ -1362,7 +1365,7 @@ section.reveal {
 }
 
 .blog-feed {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -1706,7 +1709,7 @@ section.reveal {
 /* ─── Blog Single Article ─── */
 
 .blog-entry-single {
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 48px 0;
 }
