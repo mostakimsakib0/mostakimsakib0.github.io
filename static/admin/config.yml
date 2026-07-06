@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: mostakimsakib0/mostakimsakib0.github.io
   branch: main
+  base_url: https://oauth.decap-cms.app
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
