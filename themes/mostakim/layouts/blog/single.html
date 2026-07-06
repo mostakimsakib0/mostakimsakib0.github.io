@@ -5,24 +5,23 @@
       <a class="blog-back" href="/blog/">← Back to Chronicle</a>
 
       {{ with .Params.image }}
-        <div class="blog-entry-img-wrap">
-          <img class="blog-entry-img" src="{{ . }}" alt="" loading="lazy">
+        <div class="blog-featured-img-wrap" style="margin-bottom: 28px;">
+          <img class="blog-featured-img" src="{{ . }}" alt="" loading="lazy">
         </div>
       {{ end }}
 
-      <div class="blog-entry-header">
-        <h1 class="blog-entry-title">{{ .Title }}</h1>
-        <div class="blog-entry-meta">
-          <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      <h1 class="blog-featured-title">{{ .Title }}</h1>
+
+      <div class="blog-entry-meta">
+        <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+        <span class="blog-entry-dot">·</span>
+        <span>{{ .ReadingTime }} min read</span>
+        {{ with .Params.tags }}
           <span class="blog-entry-dot">·</span>
-          <span>{{ .ReadingTime }} min read</span>
-          {{ with .Params.tags }}
-            <span class="blog-entry-dot">·</span>
-            {{ range . }}
-              <span class="blog-entry-tag">{{ . }}</span>
-            {{ end }}
+          {{ range . }}
+            <span class="blog-entry-tag">{{ . }}</span>
           {{ end }}
-        </div>
+        {{ end }}
       </div>
 
       {{ with .Params.description }}
