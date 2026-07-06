@@ -14,9 +14,10 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false, hint: "Upload a featured image for the blog post" }
       - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Tags", name: "tags", widget: "list", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Use the image button in the toolbar to upload & insert images in the post" }
 
   - name: "achievements"
     label: "Achievements"
@@ -26,6 +27,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
@@ -37,6 +39,7 @@ collections:
         file: "content/about/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Featured Image", name: "image", widget: "image", required: false }
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Projects"
@@ -44,6 +47,7 @@ collections:
         file: "content/projects/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Featured Image", name: "image", widget: "image", required: false }
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
@@ -51,5 +55,6 @@ collections:
         file: "content/contact/_index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Featured Image", name: "image", widget: "image", required: false }
           - { label: "Description", name: "description", widget: "string", required: false }
           - { label: "Body", name: "body", widget: "markdown" }

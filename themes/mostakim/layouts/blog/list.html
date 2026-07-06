@@ -47,6 +47,9 @@
               {{ end }}
             {{ end }}
           </div>
+          {{ with $featured.Params.image }}
+            <img class="pa-lead-img" src="{{ . }}" alt="" loading="lazy">
+          {{ end }}
           <div class="pa-lead-text rich-text">
             {{ $featured.Content }}
           </div>
@@ -69,6 +72,9 @@
               <span>|</span>
               <span>{{ $post.ReadingTime }} min</span>
             </div>
+            {{ with $post.Params.image }}
+              <img class="pa-story-img" src="{{ . }}" alt="" loading="lazy">
+            {{ end }}
             <div class="pa-story-text rich-text">
               {{ $post.Content }}
             </div>
