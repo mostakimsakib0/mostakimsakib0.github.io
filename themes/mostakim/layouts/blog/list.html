@@ -51,34 +51,31 @@
           </div>
         </div>
 
-        {{ $remaining := after $featuredCount $posts }}
-        {{ if $remaining }}
-          <div class="blog-grid">
-            {{ range $i, $post := $remaining }}
-              <article class="blog-card">
-                {{ with $post.Params.image }}
-                  <div class="blog-card-img-wrap">
-                    <img class="blog-card-img" src="{{ . }}" alt="" loading="lazy">
-                  </div>
-                {{ end }}
-                <div class="blog-card-body">
-                  <h3 class="blog-card-title">{{ $post.Title }}</h3>
-                  <div class="blog-card-meta">
-                    <span>{{ $post.Date.Format "Jan 2, 2006" }}</span>
-                    <span class="blog-entry-dot">·</span>
-                    <span>{{ $post.ReadingTime }} min</span>
-                  </div>
-                  {{ with $post.Params.description }}
-                    <p class="blog-card-desc">{{ . }}</p>
-                  {{ end }}
-                  <div class="blog-card-content">
-                    {{ $post.Content }}
-                  </div>
+        <div class="blog-grid">
+          {{ range $posts }}
+            <article class="blog-card">
+              {{ with .Params.image }}
+                <div class="blog-card-img-wrap">
+                  <img class="blog-card-img" src="{{ . }}" alt="" loading="lazy">
                 </div>
-              </article>
-            {{ end }}
-          </div>
-        {{ end }}
+              {{ end }}
+              <div class="blog-card-body">
+                <h3 class="blog-card-title">{{ .Title }}</h3>
+                <div class="blog-card-meta">
+                  <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                  <span class="blog-entry-dot">·</span>
+                  <span>{{ .ReadingTime }} min</span>
+                </div>
+                {{ with .Params.description }}
+                  <p class="blog-card-desc">{{ . }}</p>
+                {{ end }}
+                <div class="blog-card-content">
+                  {{ .Content }}
+                </div>
+              </div>
+            </article>
+          {{ end }}
+        </div>
       {{ else }}
         <div class="blog-empty">
           <p>No posts yet. Coming soon.</p>
