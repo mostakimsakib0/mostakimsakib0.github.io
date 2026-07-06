@@ -1,9 +1,12 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
 backend:
-  name: git-gateway
+  name: github
+  repo: mostakimsakib0/mostakimsakib0.github.io
   branch: main
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: /static/uploads
+public_folder: /uploads
 
 collections:
   - name: "blog"
