@@ -16,7 +16,7 @@
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem(storageKey, theme);
     if (icon) {
-      icon.textContent = theme === "dark" ? "🌙" : "☀️";
+      icon.textContent = theme === "dark" ? "☀️" : "🌙";
     }
   }
 
