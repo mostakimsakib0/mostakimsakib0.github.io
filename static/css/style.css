@@ -1375,8 +1375,8 @@ section.reveal {
 /* ── Post Grid ── */
 .blog-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 .blog-card {
@@ -1609,7 +1609,7 @@ section.reveal {
   .hero-highlights { justify-content: center; }
   .hero-stats { flex-wrap: wrap; justify-content: center; }
 
-  .blog-grid { grid-template-columns: 1fr; gap: 32px; }
+  .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
   .contact-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-inner { flex-direction: column; text-align: center; }
 
@@ -1646,7 +1646,7 @@ section.reveal {
   .about-grid { grid-template-columns: 1fr; }
   .card { padding: 20px; }
 
-  .blog-grid { gap: 24px; }
+  .blog-grid { grid-template-columns: 1fr; gap: 24px; }
   .blog-card-content { font-size: 0.82rem; }
   .blog-entry-body { font-size: 0.88rem; }
   .blog-entry-single { padding: 24px 0; }
