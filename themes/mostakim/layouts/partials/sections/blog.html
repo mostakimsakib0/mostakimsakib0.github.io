@@ -1,5 +1,4 @@
 {{ $posts := where .Site.RegularPages "Section" "blog" }}
-{{ $featured := index $posts 0 }}
 <section class="section reveal" id="blog">
   <div class="container">
     <div class="section-heading">
@@ -7,33 +6,26 @@
       <h2 class="section-title">Writing that documents the journey.</h2>
       <p class="section-lead">Notes on systems, product thinking, and the craft of building.</p>
     </div>
-    <div class="grid">
+    <div class="newspaper-columns" style="margin-bottom: 32px;">
       {{ range first 3 $posts }}
-        <article class="card reveal">
-          <div class="blog-card-meta" style="margin-bottom: 4px;">
-            <span class="meta">{{ .Date.Format "Jan 2, 2006" }}</span>
-            <span class="meta">·</span>
-            <span class="meta">{{ .ReadingTime }} min read</span>
+        <article class="newspaper-article reveal">
+          <div class="newspaper-article-meta">
+            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span>·</span>
+            <span>{{ .ReadingTime }} min</span>
           </div>
-          <div class="card-header">
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          </div>
+          <h3 class="newspaper-article-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
           {{ with .Params.description }}
-            <p>{{ . }}</p>
+            <p class="newspaper-article-desc">{{ . }}</p>
           {{ end }}
-          <div class="blog-card-footer" style="display: flex; justify-content: space-between; align-items: center;">
-            <div class="chip-row">
-              {{ range .Params.tags }}
-                <span>#{{ . }}</span>
-              {{ end }}
-            </div>
-            <a class="text-link card-cta" href="{{ .RelPermalink }}">Read →</a>
-          </div>
+          <a class="newspaper-continue" href="{{ .RelPermalink }}">Read →</a>
         </article>
       {{ end }}
     </div>
     <div class="section-cta">
-      <a class="button ghost" href="/blog/">Explore the blog</a>
+      <a class="button ghost" href="/blog/">Browse the Chronicle →</a>
     </div>
   </div>
 </section>
