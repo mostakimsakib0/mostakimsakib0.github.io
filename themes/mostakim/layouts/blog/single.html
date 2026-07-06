@@ -1,63 +1,46 @@
 {{ define "main" }}
-<article class="newspaper-article-page">
-  <div class="newspaper-article-masthead">
-    <div class="container">
-      <a class="newspaper-back" href="/blog/">← Back to Chronicle</a>
-      <p class="newspaper-article-category">Dispatch</p>
-      <h1 class="newspaper-article-title">{{ .Title }}</h1>
-      <div class="newspaper-article-byline">
-        <span class="newspaper-article-date">{{ .Date.Format "January 2, 2006" }}</span>
-        <span>·</span>
-        <span>{{ .ReadingTime }} min read</span>
-        {{ with .Params.tags }}
-          <span>·</span>
-          {{ range . }}
-            <span class="newspaper-tag">{{ . }}</span>
+<article class="section" id="main-content">
+  <div class="container">
+    <div class="blog-entry-single">
+      <a class="blog-back" href="/blog/">← Back to Chronicle</a>
+
+      {{ with .Params.image }}
+        <div class="blog-entry-img-wrap">
+          <img class="blog-entry-img" src="{{ . }}" alt="" loading="lazy">
+        </div>
+      {{ end }}
+
+      <div class="blog-entry-header">
+        <h1 class="blog-entry-title">{{ .Title }}</h1>
+        <div class="blog-entry-meta">
+          <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+          <span class="blog-entry-dot">·</span>
+          <span>{{ .ReadingTime }} min read</span>
+          {{ with .Params.tags }}
+            <span class="blog-entry-dot">·</span>
+            {{ range . }}
+              <span class="blog-entry-tag">{{ . }}</span>
+            {{ end }}
           {{ end }}
-        {{ end }}
+        </div>
+      </div>
+
+      {{ with .Params.description }}
+        <p class="blog-entry-desc">{{ . }}</p>
+      {{ end }}
+
+      <div class="blog-entry-body">
+        {{ .Content }}
+      </div>
+
+      <div class="blog-footer">
+        <div class="blog-share">
+          <span class="blog-share-label">Share</span>
+          <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener">Twitter</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="newspaper-divider-thin"></div>
-
-  <div class="container newspaper-article-body rich-text">
-    {{ .Content }}
-  </div>
-
-  <div class="newspaper-divider-thin"></div>
-
-  <div class="container newspaper-article-footer">
-    <div class="newspaper-share">
-      <span class="newspaper-share-label">Share this dispatch:</span>
-      <a href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener">Twitter</a>
-      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
-
-  {{ $related := where (.Site.RegularPages.Related .) "Section" "blog" | first 2 }}
-  {{ if $related }}
-    <div class="newspaper-divider">
-      <span>Further Reading</span>
-    </div>
-    <div class="container newspaper-columns">
-      {{ range $related }}
-        <article class="newspaper-article reveal">
-          <div class="newspaper-article-meta">
-            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-            <span>·</span>
-            <span>{{ .ReadingTime }} min</span>
-          </div>
-          <h3 class="newspaper-article-title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </h3>
-          {{ with .Params.description }}
-            <p class="newspaper-article-desc">{{ . }}</p>
-          {{ end }}
-          <a class="newspaper-continue" href="{{ .RelPermalink }}">Read →</a>
-        </article>
-      {{ end }}
-    </div>
-  {{ end }}
 </article>
 {{ end }}

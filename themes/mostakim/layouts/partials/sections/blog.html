@@ -6,19 +6,28 @@
       <h2 class="section-title">Writing that documents the journey.</h2>
       <p class="section-lead">Notes on systems, product thinking, and the craft of building.</p>
     </div>
-    <div style="max-width: 720px; margin: 0 auto;">
+    <div class="blog-feed">
       {{ range first 3 $posts }}
-        <article class="pa-story" style="border: none; border-bottom: 1px solid var(--border); padding: 20px 0;">
-          <span class="pa-category">Dispatch</span>
-          <h2 class="pa-story-title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </h2>
-          <div class="pa-meta">
-            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-            <span>|</span>
-            <span>{{ .ReadingTime }} min</span>
+        <article class="blog-entry">
+          {{ with .Params.image }}
+            <div class="blog-entry-img-wrap">
+              <img class="blog-entry-img" src="{{ . }}" alt="" loading="lazy">
+            </div>
+          {{ end }}
+          <div class="blog-entry-header">
+            <h2 class="blog-entry-title">
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            <div class="blog-entry-meta">
+              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+              <span class="blog-entry-dot">·</span>
+              <span>{{ .ReadingTime }} min read</span>
+            </div>
           </div>
-          <div class="pa-story-text rich-text">
+          {{ with .Params.description }}
+            <p class="blog-entry-desc">{{ . }}</p>
+          {{ end }}
+          <div class="blog-entry-body">
             {{ .Content }}
           </div>
         </article>

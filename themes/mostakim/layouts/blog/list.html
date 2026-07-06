@@ -1,93 +1,56 @@
 {{ define "main" }}
 {{ $posts := .Pages }}
-{{ $featured := index $posts 0 }}
-{{ $date := now.Format "January 2, 2006" }}
-<section class="pa-page" id="main-content">
-  <div class="pa-topbar">
-    <div class="container pa-topbar-inner">
-      <span class="pa-topbar-date">{{ $date }}</span>
-      <nav class="pa-topbar-nav">
-        <a href="/">Home</a>
-        <a href="/blog/">Blog</a>
-        <a href="/projects/">Projects</a>
-        <a href="/about/">About</a>
-      </nav>
+<section class="section" id="main-content">
+  <div class="container">
+    <div class="blog-header">
+      <p class="blog-header-eyebrow">The Chronicle</p>
+      <h1 class="blog-header-title">Notes on systems, product thinking, and the craft of building.</h1>
     </div>
-  </div>
 
-  <div class="pa-masthead">
-    <div class="container pa-masthead-inner">
-      <p class="pa-masthead-label">The Chronicle</p>
-      <p class="pa-masthead-tagline">Notes on systems, product thinking, and the craft of building.</p>
-    </div>
-  </div>
-
-  <nav class="pa-catnav">
-    <div class="container">
+    <div class="blog-feed">
       {{ range $i, $post := $posts }}
-        <a href="#post-{{ $i }}">{{ $post.Title }}</a>
-      {{ end }}
-    </div>
-  </nav>
-
-  <div class="container pa-content">
-    {{ if $featured }}
-      <article class="pa-lead" id="post-0">
-        <div class="pa-lead-body">
-          <span class="pa-category">Lead Story</span>
-          <h1 class="pa-lead-title">{{ $featured.Title }}</h1>
-          <div class="pa-meta">
-            <span>{{ $featured.Date.Format "January 2, 2006" }}</span>
-            <span>|</span>
-            <span>{{ $featured.ReadingTime }} min read</span>
-            {{ with $featured.Params.tags }}
-              <span>|</span>
-              {{ range . }}
-                <span class="pa-tag">{{ . }}</span>
-              {{ end }}
-            {{ end }}
-          </div>
-          {{ with $featured.Params.image }}
-            <img class="pa-lead-img" src="{{ . }}" alt="" loading="lazy">
+        <article class="blog-entry" id="post-{{ $i }}">
+          {{ with $post.Params.image }}
+            <div class="blog-entry-img-wrap">
+              <img class="blog-entry-img" src="{{ . }}" alt="" loading="lazy">
+            </div>
           {{ end }}
-          <div class="pa-lead-text rich-text">
-            {{ $featured.Content }}
-          </div>
-        </div>
-      </article>
-    {{ end }}
 
-    <div class="pa-divider"></div>
-
-    <div class="pa-grid">
-      {{ range $i, $post := $posts }}
-        {{ if ne $i 0 }}
-          <article class="pa-story {{ if eq $i 1 }}pa-story-featured{{ end }}" id="post-{{ $i }}">
-            <span class="pa-category">Dispatch</span>
-            <h2 class="pa-story-title">
-              <a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a>
-            </h2>
-            <div class="pa-meta">
+          <div class="blog-entry-header">
+            <h2 class="blog-entry-title">{{ $post.Title }}</h2>
+            <div class="blog-entry-meta">
               <span>{{ $post.Date.Format "Jan 2, 2006" }}</span>
-              <span>|</span>
-              <span>{{ $post.ReadingTime }} min</span>
+              <span class="blog-entry-dot">·</span>
+              <span>{{ $post.ReadingTime }} min read</span>
+              {{ with $post.Params.tags }}
+                <span class="blog-entry-dot">·</span>
+                {{ range . }}
+                  <span class="blog-entry-tag">{{ . }}</span>
+                {{ end }}
+              {{ end }}
             </div>
-            {{ with $post.Params.image }}
-              <img class="pa-story-img" src="{{ . }}" alt="" loading="lazy">
-            {{ end }}
-            <div class="pa-story-text rich-text">
-              {{ $post.Content }}
-            </div>
-          </article>
-        {{ end }}
+          </div>
+
+          {{ with $post.Params.description }}
+            <p class="blog-entry-desc">{{ . }}</p>
+          {{ end }}
+
+          <div class="blog-entry-body">
+            {{ $post.Content }}
+          </div>
+        </article>
+      {{ end }}
+
+      {{ if not $posts }}
+        <div class="blog-empty">
+          <p>No posts yet. Coming soon.</p>
+        </div>
       {{ end }}
     </div>
 
-    {{ if not $posts }}
-      <div class="pa-empty">
-        <p>No dispatches yet. The press is idle.</p>
-      </div>
-    {{ end }}
+    <div class="section-cta">
+      <a class="button ghost" href="/">Back to Home</a>
+    </div>
   </div>
 </section>
 {{ end }}
