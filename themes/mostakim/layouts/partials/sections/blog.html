@@ -6,21 +6,22 @@
       <h2 class="section-title">Writing that documents the journey.</h2>
       <p class="section-lead">Notes on systems, product thinking, and the craft of building.</p>
     </div>
-    <div class="newspaper-columns" style="margin-bottom: 32px;">
+    <div style="max-width: 720px; margin: 0 auto;">
       {{ range first 3 $posts }}
-        <article class="newspaper-article reveal">
-          <div class="newspaper-article-meta">
-            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-            <span>·</span>
-            <span>{{ .ReadingTime }} min</span>
+        <article class="newspaper-full-article reveal" style="padding: 24px 0;">
+          <header class="newspaper-full-header">
+            <h2 class="newspaper-full-title">
+              <a href="{{ .RelPermalink }}" style="color: inherit;">{{ .Title }}</a>
+            </h2>
+            <div class="newspaper-full-meta">
+              <span>{{ .Date.Format "January 2, 2006" }}</span>
+              <span>·</span>
+              <span>{{ .ReadingTime }} min read</span>
+            </div>
+          </header>
+          <div class="newspaper-full-body rich-text">
+            {{ .Content }}
           </div>
-          <h3 class="newspaper-article-title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </h3>
-          {{ with .Params.description }}
-            <p class="newspaper-article-desc">{{ . }}</p>
-          {{ end }}
-          <a class="newspaper-continue" href="{{ .RelPermalink }}">Read →</a>
         </article>
       {{ end }}
     </div>

@@ -1461,55 +1461,6 @@ section.reveal {
   color: #06b6d4;
 }
 
-/* Article columns */
-.newspaper-columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 0;
-}
-
-.newspaper-article {
-  padding: 28px 24px;
-  border-bottom: 1px solid var(--border);
-  border-right: 1px solid var(--border);
-}
-
-.newspaper-article:nth-child(3n) {
-  border-right: none;
-}
-
-.newspaper-article-meta {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  display: flex;
-  gap: 6px;
-  margin-bottom: 8px;
-}
-
-.newspaper-article-title {
-  font-size: 1.1rem;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  margin-bottom: 8px;
-}
-
-.newspaper-article-title a {
-  color: var(--text);
-  transition: color 0.2s ease;
-}
-
-.newspaper-article-title a:hover {
-  color: var(--accent);
-}
-
-.newspaper-article-desc {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
 .newspaper-tag {
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -1517,17 +1468,137 @@ section.reveal {
   font-weight: 500;
 }
 
-.newspaper-article-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
 .newspaper-empty {
   text-align: center;
   padding: 80px 0;
   color: var(--text-secondary);
   font-style: italic;
+}
+
+/* ─── Newspaper Full Article (list page) ─── */
+.newspaper-full-article {
+  padding: 40px 0;
+}
+
+.newspaper-full-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--text);
+}
+
+.newspaper-full-title {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.newspaper-full-meta {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.newspaper-full-body {
+  max-width: 100%;
+}
+
+.newspaper-full-body h2 {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.newspaper-full-body h3 {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.newspaper-full-body p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.newspaper-full-body p:first-child::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3em;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  margin-right: 8px;
+  margin-top: 3px;
+  color: var(--accent);
+}
+
+.newspaper-full-body code {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.88em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.newspaper-full-body pre {
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  margin: 16px 0;
+}
+
+.newspaper-full-body pre code {
+  background: none;
+  padding: 0;
+  color: var(--text);
+}
+
+.newspaper-full-body img {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  margin: 20px 0;
+  max-width: 100%;
+}
+
+.newspaper-full-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 14px 20px;
+  margin: 20px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.newspaper-full-body blockquote p {
+  margin-bottom: 0;
+}
+
+.newspaper-full-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
+.newspaper-full-body ul,
+.newspaper-full-body ol {
+  padding-left: 22px;
+  margin-bottom: 16px;
+}
+
+.newspaper-full-body li {
+  margin-bottom: 6px;
+  line-height: 1.7;
+}
+
+.newspaper-article-sep {
+  margin: 0;
 }
 
 /* ─── Newspaper Article Page ─── */
