@@ -8,18 +8,17 @@
     </div>
     <div style="max-width: 720px; margin: 0 auto;">
       {{ range first 3 $posts }}
-        <article class="newspaper-full-article reveal" style="padding: 24px 0;">
-          <header class="newspaper-full-header">
-            <h2 class="newspaper-full-title">
-              <a href="{{ .RelPermalink }}" style="color: inherit;">{{ .Title }}</a>
-            </h2>
-            <div class="newspaper-full-meta">
-              <span>{{ .Date.Format "January 2, 2006" }}</span>
-              <span>·</span>
-              <span>{{ .ReadingTime }} min read</span>
-            </div>
-          </header>
-          <div class="newspaper-full-body rich-text">
+        <article class="pa-story" style="border: none; border-bottom: 1px solid var(--border); padding: 20px 0;">
+          <span class="pa-category">Dispatch</span>
+          <h2 class="pa-story-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+          <div class="pa-meta">
+            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span>|</span>
+            <span>{{ .ReadingTime }} min</span>
+          </div>
+          <div class="pa-story-text rich-text">
             {{ .Content }}
           </div>
         </article>

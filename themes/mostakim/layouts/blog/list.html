@@ -1,45 +1,84 @@
 {{ define "main" }}
 {{ $posts := .Pages }}
+{{ $featured := index $posts 0 }}
 {{ $date := now.Format "January 2, 2006" }}
-<section class="newspaper-page" id="main-content">
-  <div class="newspaper-masthead">
-    <div class="container">
-      <p class="newspaper-date">{{ $date }}</p>
-      <h1 class="newspaper-name">The Chronicle</h1>
-      <p class="newspaper-tagline">Notes on systems, product thinking, and the craft of building.</p>
+<section class="pa-page" id="main-content">
+  <div class="pa-topbar">
+    <div class="container pa-topbar-inner">
+      <span class="pa-topbar-date">{{ $date }}</span>
+      <nav class="pa-topbar-nav">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/projects/">Projects</a>
+        <a href="/about/">About</a>
+      </nav>
     </div>
   </div>
 
-  <div class="newspaper-divider-thin"></div>
+  <div class="pa-masthead">
+    <div class="container pa-masthead-inner">
+      <p class="pa-masthead-label">The Chronicle</p>
+      <p class="pa-masthead-tagline">Notes on systems, product thinking, and the craft of building.</p>
+    </div>
+  </div>
 
-  <div class="container newspaper-listing">
-    {{ range $i, $post := $posts }}
-      <article class="newspaper-full-article reveal {{ if eq $i 0 }}reveal-delay-1{{ else if eq $i 1 }}reveal-delay-2{{ else if eq $i 2 }}reveal-delay-3{{ end }}">
-        <header class="newspaper-full-header">
-          <h2 class="newspaper-full-title">{{ $post.Title }}</h2>
-          <div class="newspaper-full-meta">
-            <span>{{ $post.Date.Format "January 2, 2006" }}</span>
-            <span>·</span>
-            <span>{{ $post.ReadingTime }} min read</span>
-            {{ with $post.Params.tags }}
-              <span>·</span>
+  <nav class="pa-catnav">
+    <div class="container">
+      {{ range $i, $post := $posts }}
+        <a href="#post-{{ $i }}">{{ $post.Title }}</a>
+      {{ end }}
+    </div>
+  </nav>
+
+  <div class="container pa-content">
+    {{ if $featured }}
+      <article class="pa-lead" id="post-0">
+        <div class="pa-lead-body">
+          <span class="pa-category">Lead Story</span>
+          <h1 class="pa-lead-title">{{ $featured.Title }}</h1>
+          <div class="pa-meta">
+            <span>{{ $featured.Date.Format "January 2, 2006" }}</span>
+            <span>|</span>
+            <span>{{ $featured.ReadingTime }} min read</span>
+            {{ with $featured.Params.tags }}
+              <span>|</span>
               {{ range . }}
-                <span class="newspaper-tag">{{ . }}</span>
+                <span class="pa-tag">{{ . }}</span>
               {{ end }}
             {{ end }}
           </div>
-        </header>
-        <div class="newspaper-full-body rich-text">
-          {{ $post.Content }}
+          <div class="pa-lead-text rich-text">
+            {{ $featured.Content }}
+          </div>
         </div>
       </article>
-      {{ if ne $i (sub (len $posts) 1) }}
-        <div class="newspaper-divider-thin newspaper-article-sep"></div>
-      {{ end }}
     {{ end }}
 
+    <div class="pa-divider"></div>
+
+    <div class="pa-grid">
+      {{ range $i, $post := $posts }}
+        {{ if ne $i 0 }}
+          <article class="pa-story {{ if eq $i 1 }}pa-story-featured{{ end }}" id="post-{{ $i }}">
+            <span class="pa-category">Dispatch</span>
+            <h2 class="pa-story-title">
+              <a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a>
+            </h2>
+            <div class="pa-meta">
+              <span>{{ $post.Date.Format "Jan 2, 2006" }}</span>
+              <span>|</span>
+              <span>{{ $post.ReadingTime }} min</span>
+            </div>
+            <div class="pa-story-text rich-text">
+              {{ $post.Content }}
+            </div>
+          </article>
+        {{ end }}
+      {{ end }}
+    </div>
+
     {{ if not $posts }}
-      <div class="newspaper-empty">
+      <div class="pa-empty">
         <p>No dispatches yet. The press is idle.</p>
       </div>
     {{ end }}
