@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $posts := .Pages }}
 <section class="section" id="main-content">
   <div class="container">
     <div class="blog-header">
@@ -6,35 +7,33 @@
       <h1 class="blog-header-title">Notes on systems, product thinking, and the craft of building.</h1>
     </div>
 
-    <div class="blog-grid">
-      {{ range .Pages }}
-        <article class="blog-card">
-          {{ with .Params.image }}
-            <div class="blog-card-img-wrap">
-              <img class="blog-card-img" src="{{ . }}" alt="" loading="lazy">
-            </div>
-          {{ end }}
-          <div class="blog-card-body">
-            <h2 class="blog-card-title">{{ .Title }}</h2>
-            <div class="blog-card-meta">
-              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-              <span class="blog-entry-dot">·</span>
-              <span>{{ .ReadingTime }} min</span>
-              {{ with .Params.tags }}
-                <span class="blog-entry-dot">·</span>
-                {{ range . }}
-                  <span class="blog-entry-tag">{{ . }}</span>
-                {{ end }}
+    <div class="blog-feed">
+      {{ if $posts }}
+        <div class="blog-grid">
+          {{ range $posts }}
+            <article class="blog-card">
+              {{ with .Params.image }}
+                <div class="blog-card-img-wrap">
+                  <img class="blog-card-img" src="{{ . }}" alt="" loading="lazy">
+                </div>
               {{ end }}
-            </div>
-            {{ with .Params.description }}
-              <p class="blog-card-desc">{{ . }}</p>
-            {{ end }}
-            <div class="blog-card-content">
-              {{ .Content }}
-            </div>
-          </div>
-        </article>
+              <div class="blog-card-body">
+                <h3 class="blog-card-title">{{ .Title }}</h3>
+                <div class="blog-card-meta">
+                  <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                  <span class="blog-entry-dot">·</span>
+                  <span>{{ .ReadingTime }} min</span>
+                </div>
+                {{ with .Params.description }}
+                  <p class="blog-card-desc">{{ . }}</p>
+                {{ end }}
+                <div class="blog-card-content">
+                  {{ .Content }}
+                </div>
+              </div>
+            </article>
+          {{ end }}
+        </div>
       {{ else }}
         <div class="blog-empty">
           <p>No posts yet. Coming soon.</p>
