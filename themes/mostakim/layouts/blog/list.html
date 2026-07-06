@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $posts := .Pages }}
-{{ $featured := index $posts 0 }}
+{{ $featuredCount := 3 }}
 <section class="section" id="main-content">
   <div class="container">
     <div class="blog-header">
@@ -9,63 +9,77 @@
     </div>
 
     <div class="blog-feed">
-      {{ if $featured }}
-        <article class="blog-featured" id="post-0">
-          {{ with $featured.Params.image }}
-            <div class="blog-featured-img-wrap">
-              <img class="blog-featured-img" src="{{ . }}" alt="" loading="lazy">
-            </div>
-          {{ end }}
-          <h2 class="blog-featured-title">{{ $featured.Title }}</h2>
-          <div class="blog-entry-meta">
-            <span>{{ $featured.Date.Format "Jan 2, 2006" }}</span>
-            <span class="blog-entry-dot">·</span>
-            <span>{{ $featured.ReadingTime }} min read</span>
-            {{ with $featured.Params.tags }}
-              <span class="blog-entry-dot">·</span>
-              {{ range . }}
-                <span class="blog-entry-tag">{{ . }}</span>
-              {{ end }}
-            {{ end }}
-          </div>
-          {{ with $featured.Params.description }}
-            <p class="blog-entry-desc">{{ . }}</p>
-          {{ end }}
-          <div class="blog-entry-body blog-featured-body">
-            {{ $featured.Content }}
-          </div>
-        </article>
-      {{ end }}
-
-      <div class="blog-grid">
-        {{ range $i, $post := $posts }}
-          {{ if ne $i 0 }}
-            <article class="blog-card" id="post-{{ $i }}">
-              {{ with $post.Params.image }}
-                <div class="blog-card-img-wrap">
-                  <img class="blog-card-img" src="{{ . }}" alt="" loading="lazy">
-                </div>
-              {{ end }}
-              <div class="blog-card-body">
-                <h3 class="blog-card-title">{{ $post.Title }}</h3>
-                <div class="blog-card-meta">
-                  <span>{{ $post.Date.Format "Jan 2, 2006" }}</span>
-                  <span class="blog-entry-dot">·</span>
-                  <span>{{ $post.ReadingTime }} min</span>
-                </div>
-                {{ with $post.Params.description }}
-                  <p class="blog-card-desc">{{ . }}</p>
+      {{ if $posts }}
+        <div class="featured-carousel" id="featured-carousel">
+          <div class="carousel-track" id="carousel-track">
+            {{ range first $featuredCount $posts }}
+              <div class="carousel-slide">
+                {{ with .Params.image }}
+                  <div class="blog-featured-img-wrap">
+                    <img class="blog-featured-img" src="{{ . }}" alt="" loading="lazy">
+                  </div>
                 {{ end }}
-                <div class="blog-card-content">
-                  {{ $post.Content }}
+                <h2 class="blog-featured-title">{{ .Title }}</h2>
+                <div class="blog-entry-meta">
+                  <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+                  <span class="blog-entry-dot">·</span>
+                  <span>{{ .ReadingTime }} min read</span>
+                  {{ with .Params.tags }}
+                    <span class="blog-entry-dot">·</span>
+                    {{ range . }}
+                      <span class="blog-entry-tag">{{ . }}</span>
+                    {{ end }}
+                  {{ end }}
+                </div>
+                {{ with .Params.description }}
+                  <p class="blog-entry-desc">{{ . }}</p>
+                {{ end }}
+                <div class="blog-entry-body blog-featured-body">
+                  {{ .Content }}
                 </div>
               </div>
-            </article>
-          {{ end }}
-        {{ end }}
-      </div>
+            {{ end }}
+          </div>
 
-      {{ if not $posts }}
+          <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous">‹</button>
+          <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next">›</button>
+
+          <div class="carousel-dots" id="carousel-dots">
+            {{ range $i, $post := first $featuredCount $posts }}
+              <button class="carousel-dot{{ if eq $i 0 }} active{{ end }}" data-slide="{{ $i }}" aria-label="Slide {{ add $i 1 }}"></button>
+            {{ end }}
+          </div>
+        </div>
+
+        {{ $remaining := after $featuredCount $posts }}
+        {{ if $remaining }}
+          <div class="blog-grid">
+            {{ range $i, $post := $remaining }}
+              <article class="blog-card">
+                {{ with $post.Params.image }}
+                  <div class="blog-card-img-wrap">
+                    <img class="blog-card-img" src="{{ . }}" alt="" loading="lazy">
+                  </div>
+                {{ end }}
+                <div class="blog-card-body">
+                  <h3 class="blog-card-title">{{ $post.Title }}</h3>
+                  <div class="blog-card-meta">
+                    <span>{{ $post.Date.Format "Jan 2, 2006" }}</span>
+                    <span class="blog-entry-dot">·</span>
+                    <span>{{ $post.ReadingTime }} min</span>
+                  </div>
+                  {{ with $post.Params.description }}
+                    <p class="blog-card-desc">{{ . }}</p>
+                  {{ end }}
+                  <div class="blog-card-content">
+                    {{ $post.Content }}
+                  </div>
+                </div>
+              </article>
+            {{ end }}
+          </div>
+        {{ end }}
+      {{ else }}
         <div class="blog-empty">
           <p>No posts yet. Coming soon.</p>
         </div>
