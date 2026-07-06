@@ -1344,20 +1344,20 @@ section.reveal {
 
 .blog-header-eyebrow {
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--accent);
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .blog-header-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
   font-weight: 400;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.5;
   font-style: italic;
 }
 
@@ -1400,7 +1400,7 @@ section.reveal {
 }
 
 .blog-featured-body {
-  font-size: 1.05rem;
+  font-size: 0.92rem;
 }
 
 /* ── Post Grid ── */
@@ -1468,8 +1468,8 @@ section.reveal {
 }
 
 .blog-card-content {
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 0.85rem;
+  line-height: 1.65;
   color: var(--text);
 }
 
@@ -1508,8 +1508,8 @@ section.reveal {
 }
 
 .blog-entry-body {
-  font-size: 1.02rem;
-  line-height: 1.85;
+  font-size: 0.92rem;
+  line-height: 1.75;
   color: var(--text);
 }
 
