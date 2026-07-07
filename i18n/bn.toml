@@ -11,7 +11,7 @@ other = "প্রকল্প"
 other = "সাফল্য"
 
 [hero_statSocials]
-other = "সামাজিক মাধ্যম"
+other = "Socials"
 
 [about_eyebrow]
 other = "সম্পর্কে"
@@ -113,13 +113,13 @@ other = "ফোন"
 other = "অবস্থান"
 
 [badge_active]
-other = "সক্রিয়"
+other = "Active"
 
 [badge_archived]
-other = "আর্কাইভ"
+other = "Archived"
 
 [badge_experiment]
-other = "পরীক্ষামূলক"
+other = "Experiment"
 
 [footer_copyright]
 other = "© {{ .year }}"

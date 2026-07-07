@@ -6,7 +6,7 @@
   stack_bn: ["Python", "Docker", "Automation"]
   link: "https://github.com/mostakimsakib0/autodocker"
   status_en: "In progress"
-  status_bn: "চলমান"
+  status_bn: "In progress"
   statusType: "experiment"
 
 - name_en: "NetGuardian"
@@ -17,7 +17,7 @@
   stack_bn: ["Rust", "Network Security", "Systems"]
   link: "https://github.com/mostakimsakib0/NetGuardian"
   status_en: "Development"
-  status_bn: "ডেভেলপমেন্ট"
+  status_bn: "Development"
   statusType: "experiment"
 
 - name_en: "Proxy Manager"
@@ -28,7 +28,7 @@
   stack_bn: ["Python", "Networking"]
   link: "https://github.com/mostakimsakib0/proxy-manager"
   status_en: "Active"
-  status_bn: "সক্রিয়"
+  status_bn: "Active"
   statusType: "active"
 
 - name_en: "MIU Software R&D Lab"
@@ -39,7 +39,7 @@
   stack_bn: ["Shell", "Infrastructure", "DevOps"]
   link: "https://github.com/mostakimsakib0/MIU-Software-R-D-Lab"
   status_en: "Active"
-  status_bn: "সক্রিয়"
+  status_bn: "Active"
   statusType: "active"
 
 - name_en: "Medilink Hospital System"
@@ -50,7 +50,7 @@
   stack_bn: ["JavaScript", "Healthcare", "Web"]
   link: "https://github.com/mostakimsakib0/Medilink-Smart-Hospital-Appointment-Booking-System"
   status_en: "Active"
-  status_bn: "সক্রিয়"
+  status_bn: "Active"
   statusType: "active"
 
 - name_en: "AI-Powered Construction SaaS"
@@ -61,7 +61,7 @@
   stack_bn: ["Python", "AI/ML", "SaaS", "Optimization"]
   link: "https://github.com/mostakimsakib0/AI-Powered-Construction-Building-Design-Optimization-SaaS"
   status_en: "Active"
-  status_bn: "সক্রিয়"
+  status_bn: "Active"
   statusType: "active"
 
 - name_en: "Legal Entity Extraction NLP"
@@ -72,7 +72,7 @@
   stack_bn: ["Python", "NLP", "Machine Learning"]
   link: "https://github.com/mostakimsakib0/Legal-Entity-Extraction-NLP-System"
   status_en: "Active"
-  status_bn: "সক্রিয়"
+  status_bn: "Active"
   statusType: "active"
 
 - name_en: "Constraint-Driven LLM"
@@ -83,7 +83,7 @@
   stack_bn: ["Python", "LLM", "AI"]
   link: "https://github.com/mostakimsakib0/constraint-driven-llm"
   status_en: "Development"
-  status_bn: "ডেভেলপমেন্ট"
+  status_bn: "Development"
   statusType: "experiment"
 
 - name_en: "Chatbot"
@@ -94,5 +94,5 @@
   stack_bn: ["পাইথন", "এনএলপি", "এআই"]
   link: "https://github.com/mostakimsakib0/chatbot"
   status_en: "Active"
-  status_bn: "সক্রিয়"
+  status_bn: "Active"
   statusType: "active"
