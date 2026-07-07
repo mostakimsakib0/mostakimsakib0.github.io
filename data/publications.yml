@@ -1,23 +1,23 @@
 - title_en: "Deep Learning Approaches for Network Intrusion Detection: A Comprehensive Survey"
-  title_bn: "ডিপ লার্নিং অ্যাপ্রোচেস ফর নেটওয়ার্ক ইনট্রুশন ডিটেকশন: একটি ব্যাপক জরিপ"
+  title_bn: "Deep Learning Approaches for Network Intrusion Detection: A Comprehensive Survey"
   authors_en: "Md. Mostakim Ahmed Sakib, Dr. Md. Golam Rabiul Alam"
-  authors_bn: "মোঃ মোস্তাকিম আহমেদ সাকিব, ডাঃ মোঃ গোলাম রবিউল আলম"
+  authors_bn: "Md. Mostakim Ahmed Sakib, Dr. Md. Golam Rabiul Alam"
   venue_en: "IEEE Access"
-  venue_bn: "আইআইইই অ্যাক্সেস"
+  venue_bn: "IEEE Access"
   year: "2026"
   doi: "10.1109/ACCESS.2026.1234567"
   link: "https://doi.org/10.1109/ACCESS.2026.1234567"
   tags_en: ["Deep Learning", "Network Security", "Intrusion Detection"]
-  tags_bn: ["ডিপ লার্নিং", "নেটওয়ার্ক সিকিউরিটি", "ইনট্রুশন ডিটেকশন"]
+  tags_bn: ["Deep Learning", "Network Security", "Intrusion Detection"]
 
 - title_en: "Constraint-Driven Prompt Engineering for Large Language Models"
-  title_bn: "কনস্ট্রেইন্ট-ড্রিভেন প্রম্পট ইঞ্জিনিয়ারিং ফর লার্জ ল্যাঙ্গুয়েজ মডেলস"
+  title_bn: "Constraint-Driven Prompt Engineering for Large Language Models"
   authors_en: "Md. Mostakim Ahmed Sakib"
-  authors_bn: "মোঃ মোস্তাকিম আহমেদ সাকিব"
+  authors_bn: "Md. Mostakim Ahmed Sakib"
   venue_en: "International Conference on Computational Linguistics (COLING)"
-  venue_bn: "আন্তর্জাতিক সম্মেলন অন কম্পিউটেশনাল লিঙ্গুইস্টিকস (কোলিং)"
+  venue_bn: "International Conference on Computational Linguistics (COLING)"
   year: "2025"
   doi: "10.1234/coling.2025.56789"
   link: "https://doi.org/10.1234/coling.2025.56789"
   tags_en: ["NLP", "LLM", "Prompt Engineering"]
-  tags_bn: ["এনএলপি", "এলএলএম", "প্রম্পট ইঞ্জিনিয়ারিং"]
+  tags_bn: ["NLP", "LLM", "Prompt Engineering"]

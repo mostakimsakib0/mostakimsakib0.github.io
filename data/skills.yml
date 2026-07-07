@@ -1,14 +1,14 @@
 - category_en: "Technical Leadership"
-  category_bn: "টেকনিক্যাল লিডারশিপ"
+  category_bn: "Technical Leadership"
   items_en: ["Interdisciplinary Collaboration", "Problem Solving", "Technical Innovation"]
-  items_bn: ["আন্তঃশৃঙ্খল সহযোগিতা", "সমস্যা সমাধান", "টেকনিক্যাল ইনোভেশন"]
+  items_bn: ["Interdisciplinary Collaboration", "Problem Solving", "Technical Innovation"]
 
 - category_en: "Specializations"
-  category_bn: "স্পেশালাইজেশন"
+  category_bn: "Specializations"
   items_en: ["Network Security", "Computer Systems", "System Design"]
-  items_bn: ["নেটওয়ার্ক সিকিউরিটি", "কম্পিউটার সিস্টেম", "সিস্টেম ডিজাইন"]
+  items_bn: ["Network Security", "Computer Systems", "System Design"]
 
 - category_en: "Soft Skills"
-  category_bn: "সফট স্কিল"
+  category_bn: "Soft Skills"
   items_en: ["Communication", "Team Leadership", "Knowledge Sharing"]
-  items_bn: ["যোগাযোগ", "টিম লিডারশিপ", "নলেজ শেয়ারিং"]
+  items_bn: ["Communication", "Team Leadership", "Knowledge Sharing"]
