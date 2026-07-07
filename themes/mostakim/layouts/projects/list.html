@@ -14,7 +14,8 @@
 
 <section class="section">
   <div class="container grid">
-    {{ range .Site.Data.projects }}
+    {{ $projects := .Site.Data.projects }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.projects }}{{ $projects = . }}{{ end }}{{ end }}
+    {{ range $projects }}
       <article class="card reveal">
         <div class="card-header">
           <h3>{{ .name }}</h3>

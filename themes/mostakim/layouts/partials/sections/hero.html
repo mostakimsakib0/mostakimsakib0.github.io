@@ -1,6 +1,6 @@
-{{ $profile := .Site.Data.profile }}
-{{ $projects := .Site.Data.projects }}
-{{ $achievements := .Site.Data.achievements }}
+{{ $profile := .Site.Data.profile }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.profile }}{{ $profile = . }}{{ end }}{{ end }}
+{{ $projects := .Site.Data.projects }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.projects }}{{ $projects = . }}{{ end }}{{ end }}
+{{ $achievements := .Site.Data.achievements }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.achievements }}{{ $achievements = . }}{{ end }}{{ end }}
 <section class="hero" id="home">
   <div class="hero-bg">
     <div class="hero-bg-grid"></div>

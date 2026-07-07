@@ -1,4 +1,4 @@
-{{ $publications := where .Site.Data.publications "year" "ne" nil }}
+{{ $pubData := .Site.Data.publications }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.publications }}{{ $pubData = . }}{{ end }}{{ end }}{{ $publications := where $pubData "year" "ne" nil }}
 <section class="section reveal" id="publications">
   <div class="container">
     <div class="section-heading">

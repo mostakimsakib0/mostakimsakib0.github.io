@@ -1,4 +1,4 @@
-{{ $achievements := .Site.Data.achievements }}
+{{ $achievements := .Site.Data.achievements }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.achievements }}{{ $achievements = . }}{{ end }}{{ end }}
 <section class="section reveal" id="achievements">
   <div class="container">
     <div class="section-heading">

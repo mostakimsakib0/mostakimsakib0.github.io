@@ -1,4 +1,4 @@
-{{ $profile := .Site.Data.profile }}
+{{ $profile := .Site.Data.profile }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.profile }}{{ $profile = . }}{{ end }}{{ end }}
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>

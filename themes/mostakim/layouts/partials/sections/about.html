@@ -1,5 +1,5 @@
 {{ $about := .Site.GetPage "/about" }}
-{{ $skills := .Site.Data.skills }}
+{{ $skills := .Site.Data.skills }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.skills }}{{ $skills = . }}{{ end }}{{ end }}
 <section class="section section-about reveal" id="about">
   <div class="container">
     <div class="section-heading">

@@ -1,4 +1,4 @@
-{{ $projects := .Site.Data.projects }}
+{{ $projects := .Site.Data.projects }}{{ if eq .Site.Language.Lang "bn" }}{{ with .Site.Data.bn.projects }}{{ $projects = . }}{{ end }}{{ end }}
 <section class="section reveal" id="projects">
   <div class="container">
     <div class="section-heading">
