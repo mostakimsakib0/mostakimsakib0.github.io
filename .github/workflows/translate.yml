@@ -32,7 +32,15 @@ jobs:
           restore-keys: translate-cache-
 
       - name: Wake LibreTranslate (Render cold start)
-        run: curl -s -o /dev/null ${{ secrets.LIBRE_TRANSLATE_URL }}
+        run: |
+          echo "Waking LibreTranslate..."
+          curl -s -o /dev/null -X POST "${{ secrets.LIBRE_TRANSLATE_URL }}/translate" \
+            -H "Content-Type: application/json" \
+            -d '{"q":"Hello","source":"en","target":"bn","format":"text"}' \
+            --max-time 180 || echo "Wake-up failed, pipeline retry will handle it"
+
+      - name: Warmup pause
+        run: sleep 5
 
       - name: Run translation pipeline
         env:
