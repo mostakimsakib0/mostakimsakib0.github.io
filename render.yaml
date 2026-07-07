@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: libretranslate
-    env: docker
-    dockerImage: libretranslate/libretranslate
-    plan: free
-    envVars:
-      - key: LT_LOAD_ONLY
-        value: en,bn
