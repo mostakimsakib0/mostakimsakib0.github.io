@@ -4,15 +4,18 @@ export async function translate(text, source = 'en', target = 'bn') {
   if (!text || text.trim().length === 0) return '';
 
   switch (config.engine) {
-    case 'google':
+    case 'google': {
       const { googleTranslate } = await import('./engines/google.js');
       return googleTranslate(text, source, target);
-    case 'libretranslate':
+    }
+    case 'libretranslate': {
       const { libreTranslate } = await import('./engines/libretranslate.js');
       return libreTranslate(text, source, target);
-    default:
+    }
+    default: {
       const { libreTranslate } = await import('./engines/libretranslate.js');
       return libreTranslate(text, source, target);
+    }
   }
 }
 
