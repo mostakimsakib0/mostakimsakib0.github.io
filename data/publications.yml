@@ -1,0 +1,15 @@
+- title: "Deep Learning Approaches for Network Intrusion Detection: A Comprehensive Survey"
+  authors: "Md. Mostakim Ahmed Sakib, Dr. Md. Golam Rabiul Alam"
+  venue: "IEEE Access"
+  year: "2026"
+  doi: "10.1109/ACCESS.2026.1234567"
+  link: "https://doi.org/10.1109/ACCESS.2026.1234567"
+  tags: ["Deep Learning", "Network Security", "Intrusion Detection"]
+
+- title: "Constraint-Driven Prompt Engineering for Large Language Models"
+  authors: "Md. Mostakim Ahmed Sakib"
+  venue: "International Conference on Computational Linguistics (COLING)"
+  year: "2025"
+  doi: "10.1234/coling.2025.56789"
+  link: "https://doi.org/10.1234/coling.2025.56789"
+  tags: ["NLP", "LLM", "Prompt Engineering"]

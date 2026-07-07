@@ -1,0 +1,35 @@
+{{ $publications := where .Site.Data.publications "year" "ne" nil }}
+<section class="section reveal" id="publications">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Publications</p>
+      <h2 class="section-title">Research & publications.</h2>
+      <p class="section-lead">Peer-reviewed papers and academic contributions.</p>
+    </div>
+    <div class="grid">
+      {{ range first 3 $publications }}
+        <article class="card">
+          <div class="card-header">
+            <h3>{{ .title }}</h3>
+            <span class="meta">{{ .year }}</span>
+          </div>
+          <p class="meta">{{ .authors }}</p>
+          <p class="meta">{{ .venue }}</p>
+          {{ with .tags }}
+            <div class="chip-row">
+              {{ range . }}
+                <span>{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+          {{ with .link }}
+            <a class="text-link card-cta" href="{{ . }}">Read paper →</a>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
+    <div class="section-cta">
+      <a class="button ghost" href="/publications/">All publications</a>
+    </div>
+  </div>
+</section>

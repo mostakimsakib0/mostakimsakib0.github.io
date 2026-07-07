@@ -47,11 +47,16 @@ timeZone = "Asia/Dhaka"
   weight = 4
 
 [[menu.main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 5
+
+[[menu.main]]
   name = "Achievements"
   url = "/achievements/"
-  weight = 5
+  weight = 6
 
 [[menu.main]]
   name = "Contact"
   url = "/contact/"
-  weight = 6
+  weight = 7

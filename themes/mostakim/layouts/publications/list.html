@@ -1,0 +1,42 @@
+{{ define "main" }}
+<section class="section section-hero">
+  <div class="container">
+    <p class="eyebrow">{{ .Section | title }}</p>
+    <h1 class="section-title">{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p class="section-lead">{{ . }}</p>
+    {{ end }}
+    {{ if .Content }}
+      <div class="rich-text">{{ .Content }}</div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid">
+    {{ range .Site.Data.publications }}
+      <article class="card reveal">
+        <div class="card-header">
+          <h3>{{ .title }}</h3>
+          <span class="meta">{{ .year }}</span>
+        </div>
+        <p class="meta">{{ .authors }}</p>
+        <p class="meta">{{ .venue }}</p>
+        {{ with .description }}
+          <p>{{ . }}</p>
+        {{ end }}
+        {{ with .tags }}
+          <div class="chip-row">
+            {{ range . }}
+              <span>{{ . }}</span>
+            {{ end }}
+          </div>
+        {{ end }}
+        {{ with .link }}
+          <a class="text-link card-cta" href="{{ . }}">Read paper →</a>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
