@@ -1,4 +1,4 @@
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 import { extractStructuralElements, restoreStructuralElements } from './markdown.js';
 import { protectPhrases, restorePhrases, resetCounter } from './placeholders.js';
 import { splitSentences, extractPhrases } from './phrases.js';

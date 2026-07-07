@@ -1,6 +1,6 @@
 import { readdirSync, statSync, existsSync, mkdirSync, writeFileSync, readFileSync } from 'fs';
 import { join, extname, relative, dirname } from 'path';
-import yaml from 'js-yaml';
+import * as yaml from 'js-yaml';
 import { processFile } from './pipeline.js';
 import { translateString, walkStrings, setValueAtPath, isSkippableValue, isSkippableKey } from './lib/data-translator.js';
 import * as cache from './lib/cache.js';
