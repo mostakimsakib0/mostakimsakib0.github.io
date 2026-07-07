@@ -35,8 +35,6 @@ export function has(hash) {
   return hash in cache;
 }
 
-export function isStale(hash, srcMtimeMs) {
-  const entry = cache[hash];
-  if (!entry) return true;
-  return entry.mtime < srcMtimeMs;
+export function isStale(hash) {
+  return !cache[hash];
 }

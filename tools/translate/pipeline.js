@@ -54,7 +54,7 @@ export async function processFile(srcPath, dstPath) {
   const srcMtime = srcStat.mtimeMs;
 
   const cached = cache.get(hash);
-  if (cached && cache.isStale(hash, srcMtime) === false) {
+  if (cached && cache.isStale(hash) === false) {
     return { status: 'cached', dstPath };
   }
 

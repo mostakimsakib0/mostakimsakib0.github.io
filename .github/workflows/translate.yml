@@ -31,6 +31,9 @@ jobs:
           key: translate-cache-${{ hashFiles('content/**/*.md') }}
           restore-keys: translate-cache-
 
+      - name: Wake LibreTranslate (Render cold start)
+        run: curl -s -o /dev/null ${{ secrets.LIBRE_TRANSLATE_URL }}
+
       - name: Run translation pipeline
         env:
           TRANSLATE_ENGINE: libretranslate
