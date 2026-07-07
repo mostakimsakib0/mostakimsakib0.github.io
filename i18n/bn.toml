@@ -1,0 +1,128 @@
+[hero_viewProjects]
+other = "প্রকল্প দেখুন"
+
+[hero_getInTouch]
+other = "যোগাযোগ করুন"
+
+[hero_statProjects]
+other = "প্রকল্প"
+
+[hero_statAchievements]
+other = "সাফল্য"
+
+[hero_statSocials]
+other = "সামাজিক মাধ্যম"
+
+[about_eyebrow]
+other = "সম্পর্কে"
+
+[about_title]
+other = "সিস্টেম ও প্রোডাক্টের সংযোগস্থলে কাজ করছি।"
+
+[about_skillsSnapshot]
+other = "দক্ষতার সংক্ষিপ্ত বিবরণ"
+
+[projects_eyebrow]
+other = "প্রকল্প"
+
+[projects_title]
+other = "নির্বাচিত কাজ ও পরীক্ষা-নিরীক্ষা।"
+
+[projects_lead]
+other = "প্রোডাক্ট বিল্ড, সিস্টেম ইঞ্জিনিয়ারিং ও ফলিত গবেষণার সমন্বয়।"
+
+[projects_viewDetails]
+other = "বিস্তারিত →"
+
+[projects_seeAll]
+other = "সব প্রকল্প দেখুন"
+
+[blog_eyebrow]
+other = "ব্লগ"
+
+[blog_title]
+other = "যাত্রাপথের গল্প বলে লেখা।"
+
+[blog_lead]
+other = "সিস্টেম, প্রোডাক্ট চিন্তাভাবনা ও বিল্ডিংয়ের নৈপুণ্য নিয়ে নোট।"
+
+[blog_browse]
+other = "ক্রনিকল ব্রাউজ করুন →"
+
+[blog_chronicle]
+other = "দ্য ক্রনিকল"
+
+[blog_empty]
+other = "এখনও কোনো পোস্ট নেই। শীঘ্রই আসছে।"
+
+[blog_backHome]
+other = "হোমে ফিরুন"
+
+[blog_backChronicle]
+other = "← ক্রনিকলে ফিরুন"
+
+[blog_minRead]
+other = "মিনিট পড়া"
+
+[blog_share]
+other = "শেয়ার"
+
+[achievements_eyebrow]
+other = "সাফল্য"
+
+[achievements_title]
+other = "মুহূর্তগুলো যা আমার ক্যারিয়ার গড়েছে।"
+
+[achievements_lead]
+other = "স্বীকৃতি, আলোচনা ও মাইলফলক যা প্রভাব তুলে ধরে।"
+
+[achievements_seeAll]
+other = "সব সাফল্য দেখুন"
+
+[publications_eyebrow]
+other = "প্রকাশনা"
+
+[publications_title]
+other = "গবেষণা ও প্রকাশনা।"
+
+[publications_lead]
+other = "পিয়ার-রিভিউড গবেষণাপত্র ও একাডেমিক অবদান।"
+
+[publications_readPaper]
+other = "পেপার পড়ুন →"
+
+[publications_seeAll]
+other = "সব প্রকাশনা"
+
+[contact_eyebrow]
+other = "যোগাযোগ"
+
+[contact_title]
+other = "চলুন একসাথে কিছু বানাই।"
+
+[contact_reachMe]
+other = "আমাকে খুঁজুন"
+
+[contact_email]
+other = "ইমেইল"
+
+[contact_phone]
+other = "ফোন"
+
+[contact_location]
+other = "অবস্থান"
+
+[badge_active]
+other = "সক্রিয়"
+
+[badge_archived]
+other = "আর্কাইভ"
+
+[badge_experiment]
+other = "পরীক্ষামূলক"
+
+[footer_copyright]
+other = "© {{ .year }}"
+
+[language_switcher]
+other = "English"

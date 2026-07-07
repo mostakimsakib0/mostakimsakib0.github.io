@@ -1,10 +1,10 @@
-{{ $profile := .Site.Data.profile }}
+{{ $profile := .Site.Data.profile }}{{ $lang := .Site.Language.Lang }}
 <section class="section section-contact reveal" id="contact">
   <div class="container contact-grid">
     <div class="contact-info">
-      <p class="eyebrow">Contact</p>
-      <h2 class="section-title">Let's build something together.</h2>
-      <p class="section-lead">{{ $profile.availability }}</p>
+      <p class="eyebrow">{{ i18n "contact_eyebrow" }}</p>
+      <h2 class="section-title">{{ i18n "contact_title" }}</h2>
+      <p class="section-lead">{{ if eq $lang "bn" }}{{ $profile.availability_bn }}{{ else }}{{ $profile.availability_en }}{{ end }}</p>
       <div class="contact-socials">
         {{ range $profile.socials }}
           <a class="social-link" href="{{ .url }}">
@@ -14,19 +14,19 @@
       </div>
     </div>
     <div class="contact-card reveal">
-      <h3>Reach me</h3>
+      <h3>{{ i18n "contact_reachMe" }}</h3>
       <div class="contact-item">
-        <div class="label">Email</div>
+        <div class="label">{{ i18n "contact_email" }}</div>
         <div class="value">{{ $profile.email }}</div>
       </div>
       {{ with $profile.phone }}
         <div class="contact-item">
-          <div class="label">Phone</div>
+          <div class="label">{{ i18n "contact_phone" }}</div>
           <div class="value">{{ . }}</div>
         </div>
       {{ end }}
       <div class="contact-item">
-        <div class="label">Location</div>
+        <div class="label">{{ i18n "contact_location" }}</div>
         <div class="value">{{ $profile.location }}</div>
       </div>
     </div>

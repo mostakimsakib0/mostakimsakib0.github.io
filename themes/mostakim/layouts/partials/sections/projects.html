@@ -1,37 +1,37 @@
-{{ $projects := .Site.Data.projects }}
+{{ $projects := .Site.Data.projects }}{{ $lang := .Site.Language.Lang }}
 <section class="section reveal" id="projects">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">Projects</p>
-      <h2 class="section-title">Selected work and experiments.</h2>
-      <p class="section-lead">A blend of product builds, systems engineering, and applied research.</p>
+      <p class="eyebrow">{{ i18n "projects_eyebrow" }}</p>
+      <h2 class="section-title">{{ i18n "projects_title" }}</h2>
+      <p class="section-lead">{{ i18n "projects_lead" }}</p>
     </div>
     <div class="grid">
       {{ range $projects }}
         <article class="card reveal">
           <div class="card-header">
-            <h3>{{ .name }}</h3>
-            {{ $status := lower .status }}
-            {{ if in $status "active" }}
-              <span class="badge badge-active">{{ .status }}</span>
-            {{ else if in $status "archive" }}
-              <span class="badge badge-archived">{{ .status }}</span>
+            <h3>{{ if eq $lang "bn" }}{{ .name_bn }}{{ else }}{{ .name_en }}{{ end }}</h3>
+            {{ if eq .statusType "active" }}
+              <span class="badge badge-active">{{ i18n "badge_active" }}</span>
+            {{ else if eq .statusType "archived" }}
+              <span class="badge badge-archived">{{ i18n "badge_archived" }}</span>
             {{ else }}
-              <span class="badge badge-experiment">{{ .status }}</span>
+              <span class="badge badge-experiment">{{ i18n "badge_experiment" }}</span>
             {{ end }}
           </div>
-          <p>{{ .description }}</p>
+          <p>{{ if eq $lang "bn" }}{{ .description_bn }}{{ else }}{{ .description_en }}{{ end }}</p>
           <div class="chip-row">
-            {{ range .stack }}
+            {{ $stack := .stack_en }}{{ if eq $lang "bn" }}{{ $stack = .stack_bn }}{{ end }}
+            {{ range $stack }}
               <span>{{ . }}</span>
             {{ end }}
           </div>
-          <a class="text-link card-cta" href="{{ .link }}">View details →</a>
+          <a class="text-link card-cta" href="{{ .link }}">{{ i18n "projects_viewDetails" }}</a>
         </article>
       {{ end }}
     </div>
     <div class="section-cta">
-      <a class="button ghost" href="/projects/">See all projects</a>
+      <a class="button ghost" href="/{{ if ne .Site.Language.Lang "en" }}{{ .Site.Language.Lang }}/{{ end }}projects/">{{ i18n "projects_seeAll" }}</a>
     </div>
   </div>
 </section>

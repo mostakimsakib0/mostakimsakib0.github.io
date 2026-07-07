@@ -1,9 +1,9 @@
-{{ $profile := .Site.Data.profile }}
+{{ $profile := .Site.Data.profile }}{{ $lang := .Site.Language.Lang }}
 <header class="site-header" id="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/">
+    <a class="brand" href="/{{ if eq $lang "bn" }}bn/{{ end }}">
       <span class="brand-name">{{ $profile.shortName }}</span>
-      <span class="brand-title">{{ $profile.title }}</span>
+      <span class="brand-title">{{ if eq $lang "bn" }}{{ $profile.title_bn }}{{ else }}{{ $profile.title_en }}{{ end }}</span>
     </a>
     <nav class="site-nav" aria-label="Main navigation">
       {{ range .Site.Menus.main }}
@@ -11,6 +11,19 @@
       {{ end }}
     </nav>
     <div class="nav-actions">
+      {{ $currentPage := . }}
+      {{ range .Site.Languages }}
+        {{ if ne .Lang $.Site.Language.Lang }}
+          {{ $lang := .Lang }}
+          {{ $link := cond (eq $lang "en") "/" (printf "/%s/" $lang) }}
+          {{ range $currentPage.Translations }}
+            {{ if eq .Site.Language.Lang $lang }}
+              {{ $link = .RelPermalink }}
+            {{ end }}
+          {{ end }}
+          <a class="lang-toggle" href="{{ $link }}" aria-label="{{ .LanguageName }}">{{ i18n "language_switcher" }}</a>
+        {{ end }}
+      {{ end }}
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
         <span id="theme-icon">🌙</span>
       </button>
@@ -25,5 +38,18 @@
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
   {{ range .Site.Menus.main }}
     <a href="{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
+  {{ $currentPage := . }}
+  {{ range .Site.Languages }}
+    {{ if ne .Lang $.Site.Language.Lang }}
+      {{ $lang := .Lang }}
+      {{ $link := cond (eq $lang "en") "/" (printf "/%s/" $lang) }}
+      {{ range $currentPage.Translations }}
+        {{ if eq .Site.Language.Lang $lang }}
+          {{ $link = .RelPermalink }}
+        {{ end }}
+      {{ end }}
+      <a class="lang-toggle mobile-lang-toggle" href="{{ $link }}" style="margin-top: 8px;">{{ i18n "language_switcher" }}</a>
+    {{ end }}
   {{ end }}
 </div>

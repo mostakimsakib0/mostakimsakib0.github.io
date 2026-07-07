@@ -1,7 +1,7 @@
-{{ define "main" }}
+{{ define "main" }}{{ $lang := .Site.Language.Lang }}
 <section class="section section-hero">
   <div class="container">
-    <p class="eyebrow">{{ .Section | title }}</p>
+    <p class="eyebrow">{{ i18n "projects_eyebrow" }}</p>
     <h1 class="section-title">{{ .Title }}</h1>
     {{ with .Params.description }}
       <p class="section-lead">{{ . }}</p>
@@ -17,26 +17,24 @@
     {{ range .Site.Data.projects }}
       <article class="card reveal">
         <div class="card-header">
-          <h3>{{ .name }}</h3>
-          {{ $status := lower .status }}
-            {{ if in $status "active" }}
-              <span class="badge badge-active">{{ .status }}</span>
-            {{ else if in $status "archive" }}
-              <span class="badge badge-archived">{{ .status }}</span>
+          <h3>{{ if eq $lang "bn" }}{{ .name_bn }}{{ else }}{{ .name_en }}{{ end }}</h3>
+            {{ if eq .statusType "active" }}
+              <span class="badge badge-active">{{ i18n "badge_active" }}</span>
+            {{ else if eq .statusType "archived" }}
+              <span class="badge badge-archived">{{ i18n "badge_archived" }}</span>
             {{ else }}
-              <span class="badge badge-experiment">{{ .status }}</span>
+              <span class="badge badge-experiment">{{ i18n "badge_experiment" }}</span>
             {{ end }}
         </div>
-        <p>{{ .description }}</p>
-        {{ with .stack }}
+        <p>{{ if eq $lang "bn" }}{{ .description_bn }}{{ else }}{{ .description_en }}{{ end }}</p>
+        {{ $stack := .stack_en }}{{ if eq $lang "bn" }}{{ $stack = .stack_bn }}{{ end }}
           <div class="chip-row">
-            {{ range . }}
+            {{ range $stack }}
               <span>{{ . }}</span>
             {{ end }}
           </div>
-        {{ end }}
         {{ with .link }}
-          <a class="text-link card-cta" href="{{ . }}">View details →</a>
+          <a class="text-link card-cta" href="{{ . }}">{{ i18n "projects_viewDetails" }}</a>
         {{ end }}
       </article>
     {{ end }}

@@ -1,6 +1,4 @@
-{{ $profile := .Site.Data.profile }}
-{{ $projects := .Site.Data.projects }}
-{{ $achievements := .Site.Data.achievements }}
+{{ $profile := .Site.Data.profile }}{{ $projects := .Site.Data.projects }}{{ $achievements := .Site.Data.achievements }}{{ $lang := .Site.Language.Lang }}
 <section class="hero" id="home">
   <div class="hero-bg">
     <div class="hero-bg-grid"></div>
@@ -10,18 +8,19 @@
   <div class="container hero-grid">
     <div class="hero-text">
       <p class="eyebrow hero-stagger hero-stagger-1">{{ $profile.location }}</p>
-      <h1 class="hero-title hero-stagger hero-stagger-2">{{ $profile.name }}</h1>
-      <p class="hero-tagline hero-stagger hero-stagger-3">{{ $profile.summary }}</p>
+      <h1 class="hero-title hero-stagger hero-stagger-2">{{ if eq $lang "bn" }}{{ $profile.name_bn }}{{ else }}{{ $profile.name_en }}{{ end }}</h1>
+      <p class="hero-tagline hero-stagger hero-stagger-3">{{ if eq $lang "bn" }}{{ $profile.summary_bn }}{{ else }}{{ $profile.summary_en }}{{ end }}</p>
       <div class="hero-actions hero-stagger hero-stagger-4">
         <div class="magnetic-wrap">
-          <a class="button primary" href="/projects/">View Projects</a>
+          <a class="button primary" href="/{{ if ne .Site.Language.Lang "en" }}{{ .Site.Language.Lang }}/{{ end }}projects/">{{ i18n "hero_viewProjects" }}</a>
         </div>
         <div class="magnetic-wrap">
-          <a class="button ghost" href="/contact/">Get in Touch</a>
+          <a class="button ghost" href="/{{ if ne .Site.Language.Lang "en" }}{{ .Site.Language.Lang }}/{{ end }}contact/">{{ i18n "hero_getInTouch" }}</a>
         </div>
       </div>
       <div class="hero-highlights hero-stagger hero-stagger-5">
-        {{ range $profile.focus }}
+        {{ $focus := $profile.focus_en }}{{ if eq $lang "bn" }}{{ $focus = $profile.focus_bn }}{{ end }}
+        {{ range $focus }}
           <span>{{ . }}</span>
         {{ end }}
       </div>
@@ -30,11 +29,11 @@
       <div class="hero-image-frame tilt-element" id="tilt-image">
         <div class="hero-image-glow"></div>
         {{ with $profile.avatar }}
-          <img class="hero-profile-img" src="{{ . }}" alt="Profile photo of {{ $profile.name }}" loading="eager">
+          <img class="hero-profile-img" src="{{ . }}" alt="Profile photo" loading="eager">
         {{ end }}
         <div class="hero-image-ring"></div>
         <div class="hero-image-ring hero-image-ring-2"></div>
-        <div class="hero-status-dot" title="Available for opportunities"></div>
+        <div class="hero-status-dot" title="{{ i18n "hero_getInTouch" }}"></div>
         <div class="hero-orb hero-orb-1"></div>
         <div class="hero-orb hero-orb-2"></div>
         <div class="hero-orb hero-orb-3"></div>
@@ -42,15 +41,15 @@
       <div class="hero-image-stats">
         <div class="hero-image-stat">
           <div class="stat-value">{{ len $projects }}</div>
-          <div class="stat-label">Projects</div>
+          <div class="stat-label">{{ i18n "hero_statProjects" }}</div>
         </div>
         <div class="hero-image-stat">
           <div class="stat-value">{{ len $achievements }}</div>
-          <div class="stat-label">Achievements</div>
+          <div class="stat-label">{{ i18n "hero_statAchievements" }}</div>
         </div>
         <div class="hero-image-stat">
           <div class="stat-value">{{ $profile.socials | len }}</div>
-          <div class="stat-label">Socials</div>
+          <div class="stat-label">{{ i18n "hero_statSocials" }}</div>
         </div>
       </div>
     </div>

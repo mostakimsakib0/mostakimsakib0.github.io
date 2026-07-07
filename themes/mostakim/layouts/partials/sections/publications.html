@@ -1,35 +1,36 @@
-{{ $publications := where .Site.Data.publications "year" "ne" nil }}
+{{ $publications := where .Site.Data.publications "year" "ne" nil }}{{ $lang := .Site.Language.Lang }}
 <section class="section reveal" id="publications">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">Publications</p>
-      <h2 class="section-title">Research & publications.</h2>
-      <p class="section-lead">Peer-reviewed papers and academic contributions.</p>
+      <p class="eyebrow">{{ i18n "publications_eyebrow" }}</p>
+      <h2 class="section-title">{{ i18n "publications_title" }}</h2>
+      <p class="section-lead">{{ i18n "publications_lead" }}</p>
     </div>
     <div class="grid">
       {{ range first 3 $publications }}
         <article class="card">
           <div class="card-header">
-            <h3>{{ .title }}</h3>
+            <h3>{{ if eq $lang "bn" }}{{ .title_bn }}{{ else }}{{ .title_en }}{{ end }}</h3>
             <span class="meta">{{ .year }}</span>
           </div>
-          <p class="meta">{{ .authors }}</p>
-          <p class="meta">{{ .venue }}</p>
+          <p class="meta">{{ if eq $lang "bn" }}{{ .authors_bn }}{{ else }}{{ .authors_en }}{{ end }}</p>
+          <p class="meta">{{ if eq $lang "bn" }}{{ .venue_bn }}{{ else }}{{ .venue_en }}{{ end }}</p>
           {{ with .tags }}
             <div class="chip-row">
-              {{ range . }}
+              {{ $tags := .tags_en }}{{ if eq $lang "bn" }}{{ $tags = .tags_bn }}{{ end }}
+            {{ range $tags }}
                 <span>{{ . }}</span>
               {{ end }}
             </div>
           {{ end }}
           {{ with .link }}
-            <a class="text-link card-cta" href="{{ . }}">Read paper →</a>
+            <a class="text-link card-cta" href="{{ . }}">{{ i18n "publications_readPaper" }}</a>
           {{ end }}
         </article>
       {{ end }}
     </div>
     <div class="section-cta">
-      <a class="button ghost" href="/publications/">All publications</a>
+      <a class="button ghost" href="/{{ if ne .Site.Language.Lang "en" }}{{ .Site.Language.Lang }}/{{ end }}publications/">{{ i18n "publications_seeAll" }}</a>
     </div>
   </div>
 </section>

@@ -424,6 +424,31 @@ section.reveal {
   transform: translateY(-1px);
 }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.lang-toggle:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  color: var(--accent);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -491,6 +516,12 @@ section.reveal {
 
 .mobile-menu a:hover {
   background: var(--accent-dim);
+}
+
+.mobile-menu .mobile-lang-toggle {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 20px;
 }
 
 @media (max-width: 860px) {

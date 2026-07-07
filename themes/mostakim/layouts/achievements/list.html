@@ -1,7 +1,7 @@
-{{ define "main" }}
+{{ define "main" }}{{ $lang := .Site.Language.Lang }}
 <section class="section section-hero">
   <div class="container">
-    <p class="eyebrow">{{ .Section | title }}</p>
+    <p class="eyebrow">{{ i18n "achievements_eyebrow" }}</p>
     <h1 class="section-title">{{ .Title }}</h1>
     {{ with .Params.description }}
       <p class="section-lead">{{ . }}</p>
@@ -17,12 +17,10 @@
     {{ range .Site.Data.achievements }}
       <article class="card reveal">
         <div class="card-header">
-          <h3>{{ .title }}</h3>
+          <h3>{{ if eq $lang "bn" }}{{ .title_bn }}{{ else }}{{ .title_en }}{{ end }}</h3>
           {{ with .year }}<span class="meta">{{ . }}</span>{{ end }}
         </div>
-        {{ with .context }}
-          <p>{{ . }}</p>
-        {{ end }}
+          <p>{{ if eq $lang "bn" }}{{ .context_bn }}{{ else }}{{ .context_en }}{{ end }}</p>
       </article>
     {{ end }}
   </div>

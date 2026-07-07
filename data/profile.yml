@@ -1,20 +1,25 @@
-name: "Md. Mostakim Ahmed Sakib"
+name_en: "Md. Mostakim Ahmed Sakib"
+name_bn: "মোঃ মোস্তাকিম আহমেদ সাকিব"
 shortName: "Mostakim Sakib"
-title: "Computer Science Engineer"
-summary: "I contribute to interdisciplinary collaboration and innovation in computer science. Building a strong foundation in computer systems and engineering with expertise in network security and technical leadership."
+title_en: "Computer Science Engineer"
+title_bn: "কম্পিউটার সায়েন্স ইঞ্জিনিয়ার"
+summary_en: "I contribute to interdisciplinary collaboration and innovation in computer science. Building a strong foundation in computer systems and engineering with expertise in network security and technical leadership."
+summary_bn: "কম্পিউটার সায়েন্সে আন্তঃশৃঙ্খল সহযোগিতা ও উদ্ভাবনে অবদান রাখছি। নেটওয়ার্ক সিকিউরিটি ও টেকনিক্যাল লিডারশিপে দক্ষতা নিয়ে কম্পিউটার সিস্টেম ও ইঞ্জিনিয়ারিংয়ে শক্ত ভিত গড়ে তুলছি।"
 location: "Dhaka, Bangladesh"
 email: "msakibmiucse@gmail.com"
 phone: "+8801996642731"
 avatar: "/uploads/profile.jpg"
-availability: "Open to collaboration and technical initiatives"
-focus: ["Interdisciplinary Collaboration", "Technical Leadership", "Network Security", "Problem Solving"]
+availability_en: "Open to collaboration and technical initiatives"
+availability_bn: "সহযোগিতা ও টেকনিক্যাল উদ্যোগে উন্মুক্ত"
+focus_en: ["Interdisciplinary Collaboration", "Technical Leadership", "Network Security", "Problem Solving"]
+focus_bn: ["আন্তঃশৃঙ্খল সহযোগিতা", "টেকনিক্যাল লিডারশিপ", "নেটওয়ার্ক সিকিউরিটি", "সমস্যা সমাধান"]
 
 socials:
   - label: "GitHub"
     url: "https://github.com/mostakimsakib0"
-    
+
   - label: "LinkedIn"
     url: "https://www.linkedin.com/in/mostakimsakib"
-    
+
   - label: "Email"
     url: "mailto:msakibmiucse@gmail.com"
