@@ -33,8 +33,8 @@ jobs:
 
       - name: Run translation pipeline
         env:
-          TRANSLATE_ENGINE: google
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          TRANSLATE_ENGINE: libretranslate
+          LIBRE_TRANSLATE_URL: ${{ secrets.LIBRE_TRANSLATE_URL }}
         run: node tools/translate/index.js
 
       - name: Build Hugo site

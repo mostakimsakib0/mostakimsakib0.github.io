@@ -10,6 +10,7 @@ function load() {
     dstDir: 'content/bn',
     engine: process.env.TRANSLATE_ENGINE || 'libretranslate',
     libreTranslateUrl: process.env.LIBRE_TRANSLATE_URL || 'http://localhost:5000',
+    googleProjectId: process.env.GOOGLE_PROJECT_ID || '',
     googleApiKey: process.env.GOOGLE_API_KEY || '',
     preserveThreshold: 0.65,
     translateThreshold: 0.35,

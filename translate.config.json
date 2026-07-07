@@ -1,7 +1,8 @@
 {
   "srcDir": "content",
   "dstDir": "content/bn",
-  "engine": "google",
+  "engine": "libretranslate",
+  "libreTranslateUrl": "http://localhost:5000",
   "preserveThreshold": 0.65,
   "translateThreshold": 0.35,
   "cacheDir": ".translate-cache",
