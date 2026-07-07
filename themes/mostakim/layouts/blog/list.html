@@ -3,8 +3,8 @@
 <section class="section" id="main-content">
   <div class="container">
     <div class="blog-header">
-      <p class="blog-header-eyebrow">{{ i18n "blog_chronicle" }}</p>
-      <h1 class="blog-header-title">{{ i18n "blog_lead" }}</h1>
+      <p class="blog-header-eyebrow">The Chronicle</p>
+      <h1 class="blog-header-title">Notes on systems, product thinking, and the craft of building.</h1>
     </div>
 
     <div class="blog-feed">
@@ -22,7 +22,7 @@
                 <div class="blog-card-meta">
                   <span>{{ .Date.Format "Jan 2, 2006" }}</span>
                   <span class="blog-entry-dot">·</span>
-                  <span>{{ .ReadingTime }} {{ i18n "blog_minRead" }}</span>
+                  <span>{{ .ReadingTime }} min</span>
                 </div>
                 {{ with .Params.description }}
                   <p class="blog-card-desc">{{ . }}</p>
@@ -36,13 +36,13 @@
         </div>
       {{ else }}
         <div class="blog-empty">
-          <p>{{ i18n "blog_empty" }}</p>
+          <p>No posts yet. Coming soon.</p>
         </div>
       {{ end }}
     </div>
 
     <div class="section-cta">
-      <a class="button ghost" href="/{{ if ne .Site.Language.Lang "en" }}{{ .Site.Language.Lang }}/{{ end }}">{{ i18n "blog_backHome" }}</a>
+      <a class="button ghost" href="/">Back to Home</a>
     </div>
   </div>
 </section>

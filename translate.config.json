@@ -1,0 +1,10 @@
+{
+  "srcDir": "content",
+  "dstDir": "content/bn",
+  "engine": "google",
+  "preserveThreshold": 0.65,
+  "translateThreshold": 0.35,
+  "cacheDir": ".translate-cache",
+  "batchSize": 10,
+  "concurrency": 3
+}

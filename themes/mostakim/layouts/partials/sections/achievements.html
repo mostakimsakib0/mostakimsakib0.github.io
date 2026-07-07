@@ -1,24 +1,24 @@
-{{ $achievements := .Site.Data.achievements }}{{ $lang := .Site.Language.Lang }}
+{{ $achievements := .Site.Data.achievements }}
 <section class="section reveal" id="achievements">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">{{ i18n "achievements_eyebrow" }}</p>
-      <h2 class="section-title">{{ i18n "achievements_title" }}</h2>
-      <p class="section-lead">{{ i18n "achievements_lead" }}</p>
+      <p class="eyebrow">Achievements</p>
+      <h2 class="section-title">Moments that shaped my career.</h2>
+      <p class="section-lead">Recognition, talks, and milestones that highlight impact.</p>
     </div>
     <div class="timeline">
       {{ range $index, $item := $achievements }}
         <div class="timeline-item reveal {{ if eq $index 0 }}reveal-delay-1{{ else if eq $index 1 }}reveal-delay-2{{ else }}reveal-delay-3{{ end }}">
           <div class="timeline-card">
-            <h3>{{ if eq $lang "bn" }}{{ .title_bn }}{{ else }}{{ .title_en }}{{ end }}</h3>
+            <h3>{{ .title }}</h3>
             <p class="meta">{{ .year }}</p>
-            <p>{{ if eq $lang "bn" }}{{ .context_bn }}{{ else }}{{ .context_en }}{{ end }}</p>
+            <p>{{ .context }}</p>
           </div>
         </div>
       {{ end }}
     </div>
     <div class="section-cta">
-      <a class="button ghost" href="/{{ if ne .Site.Language.Lang "en" }}{{ .Site.Language.Lang }}/{{ end }}achievements/">{{ i18n "achievements_seeAll" }}</a>
+      <a class="button ghost" href="/achievements/">See achievements</a>
     </div>
   </div>
 </section>

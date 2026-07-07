@@ -7,13 +7,27 @@ summaryLength = 24
 timeZone = "Asia/Dhaka"
 
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    languageCode = "en-us"
+    languageName = "English"
+    title = "Mostakim Sakib"
+    contentDir = "content"
+    weight = 1
+
+  [languages.bn]
+    languageCode = "bn"
+    languageName = "বাংলা"
+    title = "মোস্তাকিম সাকিব"
+    contentDir = "content/bn"
+    weight = 2
 
 [params]
   brandName = "Md. Mostakim Ahmed Sakib"
   shortName = "Mostakim Sakib"
   tagline = "Software Engineer | Product-minded developer | Tech writer"
-  description = "Portfolio and publishing home of Mostakim Sakib."
+  description = "Portfolio and publishing platform for Mostakim Sakib."
   accent = "#0ea5a5"
 
 [outputs]
@@ -27,87 +41,37 @@ defaultContentLanguageInSubdir = false
 [permalinks]
   blog = "/blog/:year/:month/:slug/"
 
-[languages]
-  [languages.en]
-    languageCode = "en-us"
-    languageName = "English"
-    title = "Mostakim Sakib"
-    weight = 1
-    contentDir = "content"
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
 
-    [[languages.en.menu.main]]
-      name = "Home"
-      url = "/"
-      weight = 1
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
 
-    [[languages.en.menu.main]]
-      name = "About"
-      url = "/about/"
-      weight = 2
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 3
 
-    [[languages.en.menu.main]]
-      name = "Projects"
-      url = "/projects/"
-      weight = 3
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 4
 
-    [[languages.en.menu.main]]
-      name = "Blog"
-      url = "/blog/"
-      weight = 4
+[[menu.main]]
+  name = "Publications"
+  url = "/publications/"
+  weight = 5
 
-    [[languages.en.menu.main]]
-      name = "Publications"
-      url = "/publications/"
-      weight = 5
+[[menu.main]]
+  name = "Achievements"
+  url = "/achievements/"
+  weight = 6
 
-    [[languages.en.menu.main]]
-      name = "Achievements"
-      url = "/achievements/"
-      weight = 6
-
-    [[languages.en.menu.main]]
-      name = "Contact"
-      url = "/contact/"
-      weight = 7
-
-  [languages.bn]
-    languageCode = "bn"
-    languageName = "বাংলা"
-    title = "Mostakim Sakib"
-    weight = 2
-    contentDir = "content/bn"
-
-    [[languages.bn.menu.main]]
-      name = "Home"
-      url = "/bn/"
-      weight = 1
-
-    [[languages.bn.menu.main]]
-      name = "About"
-      url = "/bn/about/"
-      weight = 2
-
-    [[languages.bn.menu.main]]
-      name = "Projects"
-      url = "/bn/projects/"
-      weight = 3
-
-    [[languages.bn.menu.main]]
-      name = "Blog"
-      url = "/bn/blog/"
-      weight = 4
-
-    [[languages.bn.menu.main]]
-      name = "Publications"
-      url = "/bn/publications/"
-      weight = 5
-
-    [[languages.bn.menu.main]]
-      name = "Achievements"
-      url = "/bn/achievements/"
-      weight = 6
-
-    [[languages.bn.menu.main]]
-      name = "Contact"
-      url = "/bn/contact/"
-      weight = 7
+[[menu.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 7

@@ -1,10 +1,10 @@
 {{ $about := .Site.GetPage "/about" }}
-{{ $skills := .Site.Data.skills }}{{ $lang := .Site.Language.Lang }}
+{{ $skills := .Site.Data.skills }}
 <section class="section section-about reveal" id="about">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">{{ i18n "about_eyebrow" }}</p>
-      <h2 class="section-title">{{ i18n "about_title" }}</h2>
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">Building at the intersection of systems & product.</h2>
       {{ with $about.Params.description }}
         <p class="section-lead">{{ . }}</p>
       {{ end }}
@@ -16,14 +16,13 @@
         </div>
       </div>
       <div class="card reveal reveal-delay-1">
-        <h3>{{ i18n "about_skillsSnapshot" }}</h3>
+        <h3>Skills snapshot</h3>
         <div class="skill-group">
           {{ range $skills }}
             <div class="skill-block">
-              <p class="skill-category">{{ if eq $lang "bn" }}{{ .category_bn }}{{ else }}{{ .category_en }}{{ end }}</p>
+              <p class="skill-category">{{ .category }}</p>
               <div class="skill-items">
-                {{ $items := .items_en }}{{ if eq $lang "bn" }}{{ $items = .items_bn }}{{ end }}
-                {{ range $i, $item := $items }}
+                {{ range $i, $item := .items }}
                   <div class="skill-bar-wrapper">
                     <div class="skill-bar-label">{{ $item }}</div>
                     <div class="skill-bar-track">

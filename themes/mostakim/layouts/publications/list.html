@@ -1,7 +1,7 @@
-{{ define "main" }}{{ $lang := .Site.Language.Lang }}
+{{ define "main" }}
 <section class="section section-hero">
   <div class="container">
-    <p class="eyebrow">{{ i18n "publications_eyebrow" }}</p>
+    <p class="eyebrow">Publications</p>
     <h1 class="section-title">{{ .Title }}</h1>
     {{ with .Params.description }}
       <p class="section-lead">{{ . }}</p>
@@ -17,20 +17,17 @@
     {{ range .Site.Data.publications }}
       <article class="card reveal">
         <div class="card-header">
-          <h3>{{ if eq $lang "bn" }}{{ .title_bn }}{{ else }}{{ .title_en }}{{ end }}</h3>
+          <h3>{{ .title }}</h3>
           <span class="meta">{{ .year }}</span>
         </div>
-        <p class="meta">{{ if eq $lang "bn" }}{{ .authors_bn }}{{ else }}{{ .authors_en }}{{ end }}</p>
-        <p class="meta">{{ if eq $lang "bn" }}{{ .venue_bn }}{{ else }}{{ .venue_en }}{{ end }}</p>
-        {{ $tags := .tags_en }}{{ if eq $lang "bn" }}{{ $tags = .tags_bn }}{{ end }}
+        <p class="meta">{{ .authors }}</p>
+        <p class="meta">{{ .venue }}</p>
           <div class="chip-row">
-            {{ range $tags }}
+            {{ range .tags }}
               <span>{{ . }}</span>
             {{ end }}
           </div>
-        {{ with .link }}
-          <a class="text-link card-cta" href="{{ . }}">{{ i18n "publications_readPaper" }}</a>
-        {{ end }}
+        <a class="text-link card-cta" href="{{ .link }}">Read paper →</a>
       </article>
     {{ end }}
   </div>

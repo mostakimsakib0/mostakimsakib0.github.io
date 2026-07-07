@@ -1,0 +1,13 @@
+{
+  "name": "hugo-bn-translate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "translate": "node index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

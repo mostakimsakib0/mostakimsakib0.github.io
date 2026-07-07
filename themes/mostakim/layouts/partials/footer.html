@@ -1,15 +1,15 @@
-{{ $profile := .Site.Data.profile }}{{ $lang := .Site.Language.Lang }}
+{{ $profile := .Site.Data.profile }}
 <footer class="site-footer">
   <div class="container footer-inner">
     <div>
       <strong>{{ $profile.shortName }}</strong>
-      <p class="meta">{{ if eq $lang "bn" }}{{ $profile.availability_bn }}{{ else }}{{ $profile.availability_en }}{{ end }}</p>
+      <p class="meta">{{ $profile.availability }}</p>
     </div>
     <div class="footer-socials">
       {{ range $profile.socials }}
         <a href="{{ .url }}">{{ .label }}</a>
       {{ end }}
     </div>
-    <p class="footer-copy">{{ i18n "footer_copyright" (dict "year" now.Year) }}</p>
+    <p class="footer-copy">{{ now.Year }} © {{ $profile.shortName }}</p>
   </div>
 </footer>

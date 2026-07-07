@@ -5,7 +5,7 @@
     <h1 class="section-title">{{ .Title }}</h1>
     <div class="meta-row">
       {{ with .Date }}<span class="meta">{{ .Format "Jan 2, 2006" }}</span>{{ end }}
-      {{ with .ReadingTime }}<span class="meta">{{ . }} {{ i18n "blog_minRead" }}</span>{{ end }}
+      {{ with .ReadingTime }}<span class="meta">{{ . }} min read</span>{{ end }}
     </div>
   </div>
 </section>

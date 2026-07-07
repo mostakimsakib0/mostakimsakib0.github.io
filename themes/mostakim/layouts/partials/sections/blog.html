@@ -2,9 +2,9 @@
 <section class="section reveal" id="blog">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">{{ i18n "blog_eyebrow" }}</p>
-      <h2 class="section-title">{{ i18n "blog_title" }}</h2>
-      <p class="section-lead">{{ i18n "blog_lead" }}</p>
+      <p class="eyebrow">Blog</p>
+      <h2 class="section-title">Writing that documents the journey.</h2>
+      <p class="section-lead">Notes on systems, product thinking, and the craft of building.</p>
     </div>
     <div class="blog-grid">
       {{ range first 4 $posts }}
@@ -21,7 +21,7 @@
             <div class="blog-card-meta">
               <span>{{ .Date.Format "Jan 2, 2006" }}</span>
               <span class="blog-entry-dot">·</span>
-              <span>{{ .ReadingTime }} {{ i18n "blog_minRead" }}</span>
+              <span>{{ .ReadingTime }} min</span>
             </div>
             {{ with .Params.description }}
               <p class="blog-card-desc">{{ . }}</p>
@@ -31,7 +31,7 @@
       {{ end }}
     </div>
     <div class="section-cta">
-      <a class="button ghost" href="/{{ if ne .Site.Language.Lang "en" }}{{ .Site.Language.Lang }}/{{ end }}blog/">{{ i18n "blog_browse" }}</a>
+      <a class="button ghost" href="/blog/">Browse the Chronicle →</a>
     </div>
   </div>
 </section>

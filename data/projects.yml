@@ -1,98 +1,62 @@
-- name_en: "AutoDocker"
-  name_bn: "AutoDocker"
-  description_en: "Docker automation and containerization utility for simplified deployment workflows."
-  description_bn: "Docker automation ও containerization utility যা deployment workflow সহজ করে।"
-  stack_en: ["Python", "Docker", "Automation"]
-  stack_bn: ["Python", "Docker", "Automation"]
+- name: "AutoDocker"
+  description: "Docker automation and containerization utility for simplified deployment workflows."
+  stack: ["Python", "Docker", "Automation"]
   link: "https://github.com/mostakimsakib0/autodocker"
-  status_en: "In progress"
-  status_bn: "In progress"
+  status: "In progress"
   statusType: "experiment"
 
-- name_en: "NetGuardian"
-  name_bn: "NetGuardian"
-  description_en: "Network security and monitoring tool built with focus on performance and reliability."
-  description_bn: "Network security ও monitoring tool যা performance ও reliability এর উপর focus করে তৈরি।"
-  stack_en: ["Rust", "Network Security", "Systems"]
-  stack_bn: ["Rust", "Network Security", "Systems"]
+- name: "NetGuardian"
+  description: "Network security and monitoring tool built with focus on performance and reliability."
+  stack: ["Rust", "Network Security", "Systems"]
   link: "https://github.com/mostakimsakib0/NetGuardian"
-  status_en: "Development"
-  status_bn: "Development"
+  status: "Development"
   statusType: "experiment"
 
-- name_en: "Proxy Manager"
-  name_bn: "Proxy Manager"
-  description_en: "Efficient proxy management system for handling network requests and routing."
-  description_bn: "Network request ও routing handle করার জন্য কার্যকর proxy management system।"
-  stack_en: ["Python", "Networking"]
-  stack_bn: ["Python", "Networking"]
+- name: "Proxy Manager"
+  description: "Efficient proxy management system for handling network requests and routing."
+  stack: ["Python", "Networking"]
   link: "https://github.com/mostakimsakib0/proxy-manager"
-  status_en: "Active"
-  status_bn: "Active"
+  status: "Active"
   statusType: "active"
 
-- name_en: "MIU Software R&D Lab"
-  name_bn: "MIU Software R&D Lab"
-  description_en: "University research and development laboratory infrastructure and tooling."
-  description_bn: "University research ও development laboratory infrastructure ও tooling।"
-  stack_en: ["Shell", "Infrastructure", "DevOps"]
-  stack_bn: ["Shell", "Infrastructure", "DevOps"]
+- name: "MIU Software R&D Lab"
+  description: "University research and development laboratory infrastructure and tooling."
+  stack: ["Shell", "Infrastructure", "DevOps"]
   link: "https://github.com/mostakimsakib0/MIU-Software-R-D-Lab"
-  status_en: "Active"
-  status_bn: "Active"
+  status: "Active"
   statusType: "active"
 
-- name_en: "Medilink Hospital System"
-  name_bn: "Medilink Hospital System"
-  description_en: "Smart hospital appointment booking system with collaborative development for healthcare management."
-  description_bn: "Smart hospital appointment booking system যা healthcare management এর জন্য collaborative ভাবে তৈরি।"
-  stack_en: ["JavaScript", "Healthcare", "Web"]
-  stack_bn: ["JavaScript", "Healthcare", "Web"]
+- name: "Medilink Hospital System"
+  description: "Smart hospital appointment booking system with collaborative development for healthcare management."
+  stack: ["JavaScript", "Healthcare", "Web"]
   link: "https://github.com/mostakimsakib0/Medilink-Smart-Hospital-Appointment-Booking-System"
-  status_en: "Active"
-  status_bn: "Active"
+  status: "Active"
   statusType: "active"
 
-- name_en: "AI-Powered Construction SaaS"
-  name_bn: "AI-Powered Construction SaaS"
-  description_en: "AI-driven construction and building design optimization platform with advanced analytics and cost estimation."
-  description_bn: "AI-driven construction ও building design optimization platform যাতে রয়েছে advanced analytics ও cost estimation।"
-  stack_en: ["Python", "AI/ML", "SaaS", "Optimization"]
-  stack_bn: ["Python", "AI/ML", "SaaS", "Optimization"]
+- name: "AI-Powered Construction SaaS"
+  description: "AI-driven construction and building design optimization platform with advanced analytics and cost estimation."
+  stack: ["Python", "AI/ML", "SaaS", "Optimization"]
   link: "https://github.com/mostakimsakib0/AI-Powered-Construction-Building-Design-Optimization-SaaS"
-  status_en: "Active"
-  status_bn: "Active"
+  status: "Active"
   statusType: "active"
 
-- name_en: "Legal Entity Extraction NLP"
-  name_bn: "Legal Entity Extraction NLP"
-  description_en: "Natural Language Processing system for automated extraction and identification of legal entities from documents."
-  description_bn: "Document থেকে automatically legal entity identify ও extract করার জন্য Natural Language Processing system।"
-  stack_en: ["Python", "NLP", "Machine Learning"]
-  stack_bn: ["Python", "NLP", "Machine Learning"]
+- name: "Legal Entity Extraction NLP"
+  description: "Natural Language Processing system for automated extraction and identification of legal entities from documents."
+  stack: ["Python", "NLP", "Machine Learning"]
   link: "https://github.com/mostakimsakib0/Legal-Entity-Extraction-NLP-System"
-  status_en: "Active"
-  status_bn: "Active"
+  status: "Active"
   statusType: "active"
 
-- name_en: "Constraint-Driven LLM"
-  name_bn: "Constraint-Driven LLM"
-  description_en: "Advanced language model framework with constraint-driven generation and control mechanisms."
-  description_bn: "Constraint-driven generation ও control mechanism সহ advanced language model framework।"
-  stack_en: ["Python", "LLM", "AI"]
-  stack_bn: ["Python", "LLM", "AI"]
+- name: "Constraint-Driven LLM"
+  description: "Advanced language model framework with constraint-driven generation and control mechanisms."
+  stack: ["Python", "LLM", "AI"]
   link: "https://github.com/mostakimsakib0/constraint-driven-llm"
-  status_en: "Development"
-  status_bn: "Development"
+  status: "Development"
   statusType: "experiment"
 
-- name_en: "Chatbot"
-  name_bn: "Chatbot"
-  description_en: "Intelligent conversational AI chatbot with natural language understanding and response generation."
-  description_bn: "Natural Language Understanding ও response generation সহ intelligent conversational AI chatbot।"
-  stack_en: ["Python", "NLP", "AI"]
-  stack_bn: ["Python", "NLP", "AI"]
+- name: "Chatbot"
+  description: "Intelligent conversational AI chatbot with natural language understanding and response generation."
+  stack: ["Python", "NLP", "AI"]
   link: "https://github.com/mostakimsakib0/chatbot"
-  status_en: "Active"
-  status_bn: "Active"
+  status: "Active"
   statusType: "active"

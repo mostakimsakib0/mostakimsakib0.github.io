@@ -1,23 +1,15 @@
-- title_en: "Deep Learning Approaches for Network Intrusion Detection: A Comprehensive Survey"
-  title_bn: "Deep Learning Approaches for Network Intrusion Detection: A Comprehensive Survey"
-  authors_en: "Mostakim Sakib, Dr. Md. Golam Rabiul Alam"
-  authors_bn: "Mostakim Sakib, Dr. Md. Golam Rabiul Alam"
-  venue_en: "IEEE Access"
-  venue_bn: "IEEE Access"
+- title: "Deep Learning Approaches for Network Intrusion Detection: A Comprehensive Survey"
+  authors: "Mostakim Sakib, Dr. Md. Golam Rabiul Alam"
+  venue: "IEEE Access"
   year: "2026"
   doi: "10.1109/ACCESS.2026.1234567"
   link: "https://doi.org/10.1109/ACCESS.2026.1234567"
-  tags_en: ["Deep Learning", "Network Security", "Intrusion Detection"]
-  tags_bn: ["Deep Learning", "Network Security", "Intrusion Detection"]
+  tags: ["Deep Learning", "Network Security", "Intrusion Detection"]
 
-- title_en: "Constraint-Driven Prompt Engineering for Large Language Models"
-  title_bn: "Constraint-Driven Prompt Engineering for Large Language Models"
-  authors_en: "Mostakim Sakib"
-  authors_bn: "Mostakim Sakib"
-  venue_en: "International Conference on Computational Linguistics (COLING)"
-  venue_bn: "International Conference on Computational Linguistics (COLING)"
+- title: "Constraint-Driven Prompt Engineering for Large Language Models"
+  authors: "Mostakim Sakib"
+  venue: "International Conference on Computational Linguistics (COLING)"
   year: "2025"
   doi: "10.1234/coling.2025.56789"
   link: "https://doi.org/10.1234/coling.2025.56789"
-  tags_en: ["NLP", "LLM", "Prompt Engineering"]
-  tags_bn: ["NLP", "LLM", "Prompt Engineering"]
+  tags: ["NLP", "LLM", "Prompt Engineering"]

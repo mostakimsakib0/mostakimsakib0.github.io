@@ -1,18 +1,13 @@
-name_en: "Mostakim Sakib"
-name_bn: "Mostakim Sakib"
+name: "Mostakim Sakib"
 shortName: "Mostakim Sakib"
-title_en: "Computer Science Engineer"
-title_bn: "Computer Science Engineer"
-summary_en: "I contribute to interdisciplinary collaboration and innovation in computer science. Building a strong foundation in computer systems and engineering with expertise in network security and technical leadership."
-summary_bn: "Computer Science এ interdisciplinary collaboration ও innovation এ contribution রাখছি। Network Security ও Technical Leadership এ expertise নিয়ে Computer Systems ও Engineering এ strong foundation গড়ে তুলছি।"
+title: "Computer Science Engineer"
+summary: "I contribute to interdisciplinary collaboration and innovation in computer science. Building a strong foundation in computer systems and engineering with expertise in network security and technical leadership."
 location: "Dhaka, Bangladesh"
 email: "msakibmiucse@gmail.com"
 phone: "+8801996642731"
 avatar: "/uploads/profile.jpg"
-availability_en: "Open to collaboration and technical initiatives"
-availability_bn: "Collaboration ও technical initiative এ open"
-focus_en: ["Interdisciplinary Collaboration", "Technical Leadership", "Network Security", "Problem Solving"]
-focus_bn: ["Interdisciplinary Collaboration", "Technical Leadership", "Network Security", "Problem Solving"]
+availability: "Open to collaboration and technical initiatives"
+focus: ["Interdisciplinary Collaboration", "Technical Leadership", "Network Security", "Problem Solving"]
 
 socials:
   - label: "GitHub"
