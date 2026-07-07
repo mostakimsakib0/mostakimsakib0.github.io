@@ -4,7 +4,7 @@ description: "পটভূমি, মূল্যবোধ ও ফোকাস �
 lang: "bn"
 ---
 
-আমি Md. Mostakim Ahmed Sakib। কম্পিউটার সায়েন্সে পড়াশোনা করছি Manarat International University তে। আমার আগ্রহের জায়গা হলো Network Security, System Design আর Technical Leadership।
+আমি Mostakim Sakib। কম্পিউটার সায়েন্সে পড়াশোনা করছি Manarat International University তে। আমার আগ্রহের জায়গা হলো Network Security, System Design আর Technical Leadership।
 
 আমি বিশ্বাস করি টেকনোলজি দিয়ে আসল সমস্যা সমাধান করাটাই আসল চ্যালেঞ্জ। আর সেটাই আমি করতে চাই — বাস্তব জীবনকে সহজ করে এমন কিছু বানানো।
 
