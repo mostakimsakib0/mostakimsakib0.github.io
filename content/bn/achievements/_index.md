@@ -1,7 +1,7 @@
 ---
-title: "সাফল্য"
-description: "মাইলফলক ও স্বীকৃতি"
+title: "Achievements"
+description: "Milestones ও recognition"
 lang: "bn"
 ---
 
-নির্বাচিত হাইলাইটস ও পেশাগত মাইলফলক।
+নির্বাচিত Highlights ও পেশাগত milestones।

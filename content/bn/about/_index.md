@@ -1,13 +1,13 @@
 ---
-title: "সম্পর্কে"
-description: "পটভূমি, মূল্যবোধ ও ফোকাস এরিয়া"
+title: "About"
+description: "Background, values ও focus areas"
 lang: "bn"
 ---
 
-আমি Mostakim Sakib। কম্পিউটার সায়েন্সে পড়াশোনা করছি Manarat International University তে। আমার আগ্রহের জায়গা হলো Network Security, System Design আর Technical Leadership।
+আমি Mostakim Sakib। Computer Science এ পড়াশোনা করছি Manarat International University তে। আমার আগ্রহের জায়গা হলো Network Security, System Design আর Technical Leadership।
 
-আমি বিশ্বাস করি টেকনোলজি দিয়ে আসল সমস্যা সমাধান করাটাই আসল চ্যালেঞ্জ। আর সেটাই আমি করতে চাই — বাস্তব জীবনকে সহজ করে এমন কিছু বানানো।
+আমি বিশ্বাস করি Technology দিয়ে আসল problem সমাধান করাটাই আসল challenge। আর সেটাই আমি করতে চাই — বাস্তব life কে সহজ করে এমন কিছু বানানো।
 
-সহযোগিতা আর শেয়ারিং আমার কাছে খুব গুরুত্বপূর্ণ। IEEE Manarat Student Branch এ Vice Chair (Technical) হিসেবে কাজ করার সুবাদে আমি অনেক কিছু শিখেছি, আর সেগুলো আমি আমার টিমের সাথেও শেয়ার করি।
+Collaboration আর sharing আমার কাছে খুব গুরুত্বপূর্ণ। IEEE Manarat Student Branch এ Vice Chair (Technical) হিসেবে কাজ করার সুবাদে আমি অনেক কিছু শিখেছি, আর সেগুলো আমি আমার team এর সাথেও share করি।
 
-এই মুহূর্তে আমি Deep Learning, Network Security আর LLM নিয়ে গবেষণা করছি। পড়াশোনার পাশাপাশি বিভিন্ন ওপেন সোর্স প্রজেক্ট আর স্টার্টআপ আইডিয়া নিয়েও কাজ করছি।
+এই মুহূর্তে আমি Deep Learning, Network Security আর LLM নিয়ে research করছি। পড়াশোনার পাশাপাশি বিভিন্ন Open Source project আর startup idea নিয়েও কাজ করছি।

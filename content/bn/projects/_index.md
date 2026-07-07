@@ -1,7 +1,7 @@
 ---
-title: "প্রকল্প"
-description: "নির্বাচিত কাজ ও পরীক্ষা-নিরীক্ষা"
+title: "Projects"
+description: "নির্বাচিত work ও experiments"
 lang: "bn"
 ---
 
-প্রোডাক্ট বিল্ড, সিস্টেম ইঞ্জিনিয়ারিং ও ফলিত গবেষণার সমন্বয়।
+Product build, System Engineering ও ফলিত research এর সমন্বয়।

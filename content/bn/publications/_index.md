@@ -1,7 +1,7 @@
 ---
-title: "প্রকাশনা"
-description: "গবেষণাপত্র ও একাডেমিক প্রকাশনা"
+title: "Publications"
+description: "Research paper ও academic publication"
 lang: "bn"
 ---
 
-পিয়ার-রিভিউড গবেষণাপত্র ও কনফারেন্স প্রসিডিংস।
+Peer-reviewed research paper ও conference proceedings।

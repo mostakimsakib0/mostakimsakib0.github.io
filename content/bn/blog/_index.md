@@ -1,7 +1,7 @@
 ---
-title: "ব্লগ"
-description: "সিস্টেম, প্রোডাক্ট থিংকিং ও বিল্ডিং নিয়ে লেখা"
+title: "Blog"
+description: "System, Product Thinking ও Building নিয়ে লেখা"
 lang: "bn"
 ---
 
-সিস্টেম, প্রোডাক্ট চিন্তাভাবনা ও বিল্ডিংয়ের নৈপুণ্য নিয়ে নোট।
+System, Product Thinking ও Building এর নৈপুণ্য নিয়ে notes।

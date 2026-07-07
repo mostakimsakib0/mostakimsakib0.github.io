@@ -1,6 +1,6 @@
 ---
-title: "হোম"
+title: "Home"
 lang: "bn"
 ---
 
-কম্পিউটার সায়েন্স ইঞ্জিনিয়ার, নেটওয়ার্ক সিকিউরিটি ও সিস্টেম ডিজাইনে আগ্রহী।
+Computer Science Engineer, Network Security ও System Design এ interested।

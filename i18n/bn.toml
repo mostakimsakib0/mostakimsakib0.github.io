@@ -1,116 +1,116 @@
 [hero_viewProjects]
-other = "প্রকল্প দেখুন"
+other = "Projects দেখুন"
 
 [hero_getInTouch]
-other = "যোগাযোগ করুন"
+other = "Contact করুন"
 
 [hero_statProjects]
-other = "প্রকল্প"
+other = "Projects"
 
 [hero_statAchievements]
-other = "সাফল্য"
+other = "Achievements"
 
 [hero_statSocials]
 other = "Socials"
 
 [about_eyebrow]
-other = "সম্পর্কে"
+other = "About"
 
 [about_title]
-other = "সিস্টেম ও প্রোডাক্টের সংযোগস্থলে কাজ করছি।"
+other = "System ও product এর সংযোগস্থলে কাজ করছি।"
 
 [about_skillsSnapshot]
-other = "দক্ষতার সংক্ষিপ্ত বিবরণ"
+other = "Skills snapshot"
 
 [projects_eyebrow]
-other = "প্রকল্প"
+other = "Projects"
 
 [projects_title]
-other = "নির্বাচিত কাজ ও পরীক্ষা-নিরীক্ষা।"
+other = "নির্বাচিত work ও experiments।"
 
 [projects_lead]
-other = "প্রোডাক্ট বিল্ড, সিস্টেম ইঞ্জিনিয়ারিং ও ফলিত গবেষণার সমন্বয়।"
+other = "Product build, System Engineering ও applied research এর সমন্বয়।"
 
 [projects_viewDetails]
-other = "বিস্তারিত →"
+other = "Details →"
 
 [projects_seeAll]
-other = "সব প্রকল্প দেখুন"
+other = "সব projects দেখুন"
 
 [blog_eyebrow]
-other = "ব্লগ"
+other = "Blog"
 
 [blog_title]
-other = "যাত্রাপথের গল্প বলে লেখা।"
+other = "Journey কে document করে এমন writing।"
 
 [blog_lead]
-other = "সিস্টেম, প্রোডাক্ট চিন্তাভাবনা ও বিল্ডিংয়ের নৈপুণ্য নিয়ে নোট।"
+other = "System, Product Thinking ও building এর craft নিয়ে notes।"
 
 [blog_browse]
-other = "ক্রনিকল ব্রাউজ করুন →"
+other = "Chronicle browse করুন →"
 
 [blog_chronicle]
-other = "দ্য ক্রনিকল"
+other = "The Chronicle"
 
 [blog_empty]
-other = "এখনও কোনো পোস্ট নেই। শীঘ্রই আসছে।"
+other = "এখনও কোনো post নেই। Coming soon।"
 
 [blog_backHome]
-other = "হোমে ফিরুন"
+other = "Home এ ফিরুন"
 
 [blog_backChronicle]
-other = "← ক্রনিকলে ফিরুন"
+other = "← Chronicle এ ফিরুন"
 
 [blog_minRead]
-other = "মিনিট পড়া"
+other = "min read"
 
 [blog_share]
-other = "শেয়ার"
+other = "Share"
 
 [achievements_eyebrow]
-other = "সাফল্য"
+other = "Achievements"
 
 [achievements_title]
-other = "মুহূর্তগুলো যা আমার ক্যারিয়ার গড়েছে।"
+other = "মুহূর্তগুলো যা আমার career টি গড়েছে।"
 
 [achievements_lead]
-other = "স্বীকৃতি, আলোচনা ও মাইলফলক যা প্রভাব তুলে ধরে।"
+other = "Recognition, talks ও milestones যা impact টি highlight করে।"
 
 [achievements_seeAll]
-other = "সব সাফল্য দেখুন"
+other = "সব achievements দেখুন"
 
 [publications_eyebrow]
-other = "প্রকাশনা"
+other = "Publications"
 
 [publications_title]
-other = "গবেষণা ও প্রকাশনা।"
+other = "Research & publications।"
 
 [publications_lead]
-other = "পিয়ার-রিভিউড গবেষণাপত্র ও একাডেমিক অবদান।"
+other = "Peer-reviewed research paper ও academic contributions।"
 
 [publications_readPaper]
-other = "পেপার পড়ুন →"
+other = "Paper পড়ুন →"
 
 [publications_seeAll]
-other = "সব প্রকাশনা"
+other = "সব publications"
 
 [contact_eyebrow]
-other = "যোগাযোগ"
+other = "Contact"
 
 [contact_title]
-other = "চলুন একসাথে কিছু বানাই।"
+other = "চলুন একসাথে কিছু build করি।"
 
 [contact_reachMe]
-other = "আমাকে খুঁজুন"
+other = "Reach me"
 
 [contact_email]
-other = "ইমেইল"
+other = "Email"
 
 [contact_phone]
-other = "ফোন"
+other = "Phone"
 
 [contact_location]
-other = "অবস্থান"
+other = "Location"
 
 [badge_active]
 other = "Active"

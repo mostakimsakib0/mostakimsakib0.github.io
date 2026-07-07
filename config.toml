@@ -73,41 +73,41 @@ defaultContentLanguageInSubdir = false
   [languages.bn]
     languageCode = "bn"
     languageName = "বাংলা"
-    title = "মোস্তাকিম সাকিব"
+    title = "Mostakim Sakib"
     weight = 2
     contentDir = "content/bn"
 
     [[languages.bn.menu.main]]
-      name = "হোম"
+      name = "Home"
       url = "/bn/"
       weight = 1
 
     [[languages.bn.menu.main]]
-      name = "সম্পর্কে"
+      name = "About"
       url = "/bn/about/"
       weight = 2
 
     [[languages.bn.menu.main]]
-      name = "প্রকল্প"
+      name = "Projects"
       url = "/bn/projects/"
       weight = 3
 
     [[languages.bn.menu.main]]
-      name = "ব্লগ"
+      name = "Blog"
       url = "/bn/blog/"
       weight = 4
 
     [[languages.bn.menu.main]]
-      name = "প্রকাশনা"
+      name = "Publications"
       url = "/bn/publications/"
       weight = 5
 
     [[languages.bn.menu.main]]
-      name = "সাফল্য"
+      name = "Achievements"
       url = "/bn/achievements/"
       weight = 6
 
     [[languages.bn.menu.main]]
-      name = "যোগাযোগ"
+      name = "Contact"
       url = "/bn/contact/"
       weight = 7

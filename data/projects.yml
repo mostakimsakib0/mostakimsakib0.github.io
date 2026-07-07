@@ -1,7 +1,7 @@
 - name_en: "AutoDocker"
   name_bn: "AutoDocker"
   description_en: "Docker automation and containerization utility for simplified deployment workflows."
-  description_bn: "ডকার অটোমেশন ও কন্টেইনারাইজেশন ইউটিলিটি যা ডেপ্লয়মেন্ট ওয়ার্কফ্লো সহজ করে।"
+  description_bn: "Docker automation ও containerization utility যা deployment workflow সহজ করে।"
   stack_en: ["Python", "Docker", "Automation"]
   stack_bn: ["Python", "Docker", "Automation"]
   link: "https://github.com/mostakimsakib0/autodocker"
@@ -12,7 +12,7 @@
 - name_en: "NetGuardian"
   name_bn: "NetGuardian"
   description_en: "Network security and monitoring tool built with focus on performance and reliability."
-  description_bn: "নেটওয়ার্ক সিকিউরিটি ও মনিটরিং টুল যা পারফরম্যান্স ও নির্ভরযোগ্যতার উপর ফোকাস করে তৈরি।"
+  description_bn: "Network security ও monitoring tool যা performance ও reliability এর উপর focus করে তৈরি।"
   stack_en: ["Rust", "Network Security", "Systems"]
   stack_bn: ["Rust", "Network Security", "Systems"]
   link: "https://github.com/mostakimsakib0/NetGuardian"
@@ -23,7 +23,7 @@
 - name_en: "Proxy Manager"
   name_bn: "Proxy Manager"
   description_en: "Efficient proxy management system for handling network requests and routing."
-  description_bn: "নেটওয়ার্ক রিকোয়েস্ট ও রাউটিং হ্যান্ডেল করার জন্য কার্যকর প্রক্সি ম্যানেজমেন্ট সিস্টেম।"
+  description_bn: "Network request ও routing handle করার জন্য কার্যকর proxy management system।"
   stack_en: ["Python", "Networking"]
   stack_bn: ["Python", "Networking"]
   link: "https://github.com/mostakimsakib0/proxy-manager"
@@ -34,7 +34,7 @@
 - name_en: "MIU Software R&D Lab"
   name_bn: "MIU Software R&D Lab"
   description_en: "University research and development laboratory infrastructure and tooling."
-  description_bn: "বিশ্ববিদ্যালয় গবেষণা ও ডেভেলপমেন্ট ল্যাবরেটরি ইনফ্রাস্ট্রাকচার ও টুলিং।"
+  description_bn: "University research ও development laboratory infrastructure ও tooling।"
   stack_en: ["Shell", "Infrastructure", "DevOps"]
   stack_bn: ["Shell", "Infrastructure", "DevOps"]
   link: "https://github.com/mostakimsakib0/MIU-Software-R-D-Lab"
@@ -45,7 +45,7 @@
 - name_en: "Medilink Hospital System"
   name_bn: "Medilink Hospital System"
   description_en: "Smart hospital appointment booking system with collaborative development for healthcare management."
-  description_bn: "স্মার্ট হাসপাতাল অ্যাপয়েন্টমেন্ট বুকিং সিস্টেম যা স্বাস্থ্যসেবা ম্যানেজমেন্টের জন্য সহযোগিতামূলকভাবে তৈরি।"
+  description_bn: "Smart hospital appointment booking system যা healthcare management এর জন্য collaborative ভাবে তৈরি।"
   stack_en: ["JavaScript", "Healthcare", "Web"]
   stack_bn: ["JavaScript", "Healthcare", "Web"]
   link: "https://github.com/mostakimsakib0/Medilink-Smart-Hospital-Appointment-Booking-System"
@@ -56,7 +56,7 @@
 - name_en: "AI-Powered Construction SaaS"
   name_bn: "AI-Powered Construction SaaS"
   description_en: "AI-driven construction and building design optimization platform with advanced analytics and cost estimation."
-  description_bn: "এআই-চালিত কনস্ট্রাকশন ও বিল্ডিং ডিজাইন অপ্টিমাইজেশন প্ল্যাটফর্ম যাতে রয়েছে অ্যাডভান্সড অ্যানালিটিক্স ও খরচ অনুমান।"
+  description_bn: "AI-driven construction ও building design optimization platform যাতে রয়েছে advanced analytics ও cost estimation।"
   stack_en: ["Python", "AI/ML", "SaaS", "Optimization"]
   stack_bn: ["Python", "AI/ML", "SaaS", "Optimization"]
   link: "https://github.com/mostakimsakib0/AI-Powered-Construction-Building-Design-Optimization-SaaS"
@@ -67,7 +67,7 @@
 - name_en: "Legal Entity Extraction NLP"
   name_bn: "Legal Entity Extraction NLP"
   description_en: "Natural Language Processing system for automated extraction and identification of legal entities from documents."
-  description_bn: "ডকুমেন্ট থেকে স্বয়ংক্রিয়ভাবে আইনি সত্তা শনাক্ত ও এক্সট্রাক্ট করার জন্য ন্যাচারাল ল্যাঙ্গুয়েজ প্রসেসিং সিস্টেম।"
+  description_bn: "Document থেকে automatically legal entity identify ও extract করার জন্য Natural Language Processing system।"
   stack_en: ["Python", "NLP", "Machine Learning"]
   stack_bn: ["Python", "NLP", "Machine Learning"]
   link: "https://github.com/mostakimsakib0/Legal-Entity-Extraction-NLP-System"
@@ -78,7 +78,7 @@
 - name_en: "Constraint-Driven LLM"
   name_bn: "Constraint-Driven LLM"
   description_en: "Advanced language model framework with constraint-driven generation and control mechanisms."
-  description_bn: "কনস্ট্রেইন্ট-চালিত জেনারেশন ও কন্ট্রোল মেকানিজম সহ অ্যাডভান্সড ল্যাঙ্গুয়েজ মডেল ফ্রেমওয়ার্ক।"
+  description_bn: "Constraint-driven generation ও control mechanism সহ advanced language model framework।"
   stack_en: ["Python", "LLM", "AI"]
   stack_bn: ["Python", "LLM", "AI"]
   link: "https://github.com/mostakimsakib0/constraint-driven-llm"
@@ -89,9 +89,9 @@
 - name_en: "Chatbot"
   name_bn: "Chatbot"
   description_en: "Intelligent conversational AI chatbot with natural language understanding and response generation."
-  description_bn: "ন্যাচারাল ল্যাঙ্গুয়েজ আন্ডারস্ট্যান্ডিং ও রেসপন্স জেনারেশন সহ বুদ্ধিমান কথোপকথনমূলক এআই চ্যাটবট।"
+  description_bn: "Natural Language Understanding ও response generation সহ intelligent conversational AI chatbot।"
   stack_en: ["Python", "NLP", "AI"]
-  stack_bn: ["পাইথন", "এনএলপি", "এআই"]
+  stack_bn: ["Python", "NLP", "AI"]
   link: "https://github.com/mostakimsakib0/chatbot"
   status_en: "Active"
   status_bn: "Active"
